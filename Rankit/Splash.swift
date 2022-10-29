@@ -12,12 +12,18 @@ let backgroundGradient = LinearGradient(
     startPoint: .top, endPoint: .bottom)
 
 struct Splash: View {
-    @State private var isActive = false
+    @State var isActive:Bool = false
+
     @State private var size = 0.8
     @State private var opacity = 0.5
 
     var body: some View {
+        if isActive {
+            InterestPage()
+        }
+        else{
             ZStack{
+                
                 backgroundGradient
                     .edgesIgnoringSafeArea(.all)
 
@@ -44,6 +50,10 @@ struct Splash: View {
                     }
                 }
             }
+        }
+        
+       
+      
     }
 }
 
