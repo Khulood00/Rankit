@@ -9,54 +9,55 @@ import SwiftUI
 
 struct InterestPage: View {
     var body: some View {
-        ZStack{
-            VStack{
-                
-                NavigationView{
-                    NavigationLink(destination: HomePage())
-                    {
+        NavigationView{
+            ZStack{
+                VStack{
+                    HStack{
+                        Spacer()
+                            .padding(30)
+                        NavigationLink {HomePage()}
+                    label: {
                         Text("Skip")
-                            .frame(maxWidth: .infinity,maxHeight: .infinity)
-                            .navigationBarTitleDisplayMode(.inline)
-                            .padding(.leading, 300.0)
+                            .font(.title2)
                     }
+                    }
+                    .padding(30)
+                    Text("Select Your Interest")
+                        .multilineTextAlignment(.center)
+                        .font(.title)
                     
-                }
-                Text("Select Your Interest")
-                    .multilineTextAlignment(.center)
-                    .padding(.bottom, 600.0)
-                    .font(.title)
-            }
-            LazyHStack{
-                    Button("Tech Camp") { }
+
+                    
+                    LazyHStack{
+                        Button("Tech Camp") { }
+                            .buttonStyle(.bordered)
+                        Button("Events") { }
+                            .buttonStyle(.bordered)
+                        Button("Art") { }
+                            .buttonStyle(.bordered)
+                        Button("Sport") { }
+                            .buttonStyle(.bordered)
+                        Button("Beauty") { }
+                            .buttonStyle(.bordered)
+                        Button("Music") { }
+                            .buttonStyle(.bordered)
+                        Button("Game") { }
+                            .buttonStyle(.bordered)
+                        Button("Business") { }
+                            .buttonStyle(.bordered)
+                        Button("Cultural") { }
+                            .buttonStyle(.bordered)
+                        Button("Fashion") { }
+                            .buttonStyle(.bordered)
+                    }.frame(width: 200,height: 200)
+                    Button("LET'S GO!") { }
+                        .padding(.top, 40.0)
                         .buttonStyle(.bordered)
-                    Button("Events") { }
-                        .buttonStyle(.bordered)
-                    Button("Art") { }
-                        .buttonStyle(.bordered)
-                    Button("Sport") { }
-                        .buttonStyle(.bordered)
-                    Button("Beauty") { }
-                        .buttonStyle(.bordered)
-                    Button("Music") { }
-                        .buttonStyle(.bordered)
-                    Button("Game") { }
-                        .buttonStyle(.bordered)
-                    Button("Business") { }
-                        .buttonStyle(.bordered)
-                    Button("Cultural") { }
-                        .buttonStyle(.bordered)
-                    Button("Fashion") { }
-                        .buttonStyle(.bordered)
-                }
-                Button("LET'S GO!") { }
-                    .padding(.top, 40.0)
-                    .buttonStyle(.bordered)
-            }
+                }}
             
         }
     }
-
+}
 struct InterestPage_Previews: PreviewProvider {
     static var previews: some View {
         InterestPage()
