@@ -6,6 +6,8 @@
 //
 import Foundation
 import SwiftUI
+import UIKit
+
 
 struct Event: Identifiable {
     let id: Int
