@@ -16,6 +16,7 @@
 		A4D8B1092909560200E137E7 /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D8B1082909560200E137E7 /* Splash.swift */; };
 		A4D8B10D2909AF8D00E137E7 /* InterestPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D8B10C2909AF8D00E137E7 /* InterestPage.swift */; };
 		A4D8B10F290A4E6300E137E7 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D8B10E290A4E6300E137E7 /* HomePage.swift */; };
+		A8EE7097290E4CDA0095C41F /* EventPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EE7096290E4CDA0095C41F /* EventPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		A4D8B1082909560200E137E7 /* Splash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
 		A4D8B10C2909AF8D00E137E7 /* InterestPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestPage.swift; sourceTree = "<group>"; };
 		A4D8B10E290A4E6300E137E7 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		A8EE7096290E4CDA0095C41F /* EventPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				A4BFDEAE290D8AF900446DE5 /* WishList.swift */,
 				A4BFDEB2290D90FD00446DE5 /* HostingTabBar.swift */,
 				A4BFDEB0290D8B0700446DE5 /* Profile.swift */,
+				A8EE7096290E4CDA0095C41F /* EventPage.swift */,
 				A4D8B0FE2909554A00E137E7 /* Assets.xcassets */,
 				A4D8B1002909554A00E137E7 /* Preview Content */,
 			);
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4D8B1092909560200E137E7 /* Splash.swift in Sources */,
+				A8EE7097290E4CDA0095C41F /* EventPage.swift in Sources */,
 				A4BFDEB1290D8B0700446DE5 /* Profile.swift in Sources */,
 				A4D8B0FB2909554900E137E7 /* RankitApp.swift in Sources */,
 				A4D8B10D2909AF8D00E137E7 /* InterestPage.swift in Sources */,
