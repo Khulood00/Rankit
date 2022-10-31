@@ -27,30 +27,23 @@ struct InterestPage: View {
                     .padding(.bottom, 600.0)
                     .font(.title)
             }
-            VStack{
-                HStack{
+            LazyHStack{
                     Button("Tech Camp") { }
                         .buttonStyle(.bordered)
                     Button("Events") { }
                         .buttonStyle(.bordered)
-                }
-                HStack{
                     Button("Art") { }
                         .buttonStyle(.bordered)
                     Button("Sport") { }
                         .buttonStyle(.bordered)
                     Button("Beauty") { }
                         .buttonStyle(.bordered)
-                }
-                HStack{
                     Button("Music") { }
                         .buttonStyle(.bordered)
                     Button("Game") { }
                         .buttonStyle(.bordered)
                     Button("Business") { }
                         .buttonStyle(.bordered)
-                }
-                HStack{
                     Button("Cultural") { }
                         .buttonStyle(.bordered)
                     Button("Fashion") { }
@@ -63,7 +56,6 @@ struct InterestPage: View {
             
         }
     }
-}
 
 struct InterestPage_Previews: PreviewProvider {
     static var previews: some View {
