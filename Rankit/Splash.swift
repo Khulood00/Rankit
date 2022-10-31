@@ -9,11 +9,11 @@ import SwiftUI
 
 let backgroundGradient = LinearGradient(
     colors: [Color(red: 94 / 255, green: 126 / 255, blue: 152 / 255),Color(red: 131 / 255, green: 180 / 255, blue: 165 / 255)],
+    
     startPoint: .top, endPoint: .bottom)
 
 struct Splash: View {
     @State var isActive:Bool = false
-
     @State private var size = 0.8
     @State private var opacity = 0.5
 
