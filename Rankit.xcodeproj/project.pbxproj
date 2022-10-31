@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A9E5F08290E60B9003A6679 /* LogInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E5F07290E60B9003A6679 /* LogInPage.swift */; };
 		A4BFDEAF290D8AF900446DE5 /* WishList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFDEAE290D8AF900446DE5 /* WishList.swift */; };
 		A4BFDEB1290D8B0700446DE5 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFDEB0290D8B0700446DE5 /* Profile.swift */; };
 		A4BFDEB3290D90FD00446DE5 /* HostingTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFDEB2290D90FD00446DE5 /* HostingTabBar.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A9E5F07290E60B9003A6679 /* LogInPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInPage.swift; sourceTree = "<group>"; };
 		A4BFDEAE290D8AF900446DE5 /* WishList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishList.swift; sourceTree = "<group>"; };
 		A4BFDEB0290D8B0700446DE5 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		A4BFDEB2290D90FD00446DE5 /* HostingTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingTabBar.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				A4BFDEB2290D90FD00446DE5 /* HostingTabBar.swift */,
 				A4BFDEB0290D8B0700446DE5 /* Profile.swift */,
 				A8EE7096290E4CDA0095C41F /* EventPage.swift */,
+				3A9E5F07290E60B9003A6679 /* LogInPage.swift */,
 				A4D8B0FE2909554A00E137E7 /* Assets.xcassets */,
 				A4D8B1002909554A00E137E7 /* Preview Content */,
 			);
@@ -159,6 +162,7 @@
 				A8EE7097290E4CDA0095C41F /* EventPage.swift in Sources */,
 				A4BFDEB1290D8B0700446DE5 /* Profile.swift in Sources */,
 				A4D8B0FB2909554900E137E7 /* RankitApp.swift in Sources */,
+				3A9E5F08290E60B9003A6679 /* LogInPage.swift in Sources */,
 				A4D8B10D2909AF8D00E137E7 /* InterestPage.swift in Sources */,
 				A4D8B10F290A4E6300E137E7 /* HomePage.swift in Sources */,
 				A4BFDEB3290D90FD00446DE5 /* HostingTabBar.swift in Sources */,
