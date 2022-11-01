@@ -45,9 +45,10 @@ struct HostingTabBar: View {
                     Text("Profile")
                     Image(systemName: "person.crop.circle")
                 }
+            
                 .toolbar(.visible, for: .tabBar)
-                                            .toolbarBackground(Color(red: 94/255, green: 126/255, blue: 152/255), for:.tabBar)
-           
+                .toolbarBackground(Color(red: 94/255, green: 126/255, blue: 152/255), for:.tabBar)
+            
         }
         .accentColor(.white)
 

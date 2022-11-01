@@ -16,6 +16,7 @@ struct EventPage: View {
                 Image("AppleAcademy")
                     .resizable()
                     .scaledToFit()
+                  
                 Text("Events")
                     .foregroundColor(Color(red: 0.334, green: 0.462, blue: 0.567))
                     .frame(width: 70.0, height: 27.0)

@@ -8,18 +8,7 @@ import Foundation
 import SwiftUI
 import UIKit
 
-struct Event: Identifiable {
-    let id: Int
-    let name: String
-    let color: Color
-}
 
-let events = [
-    Event(id: 0, name: "Camps",  color: Color(red: 94/255, green: 126/255, blue: 152/255)),
-    Event(id: 1, name: "Events",  color: Color(red: 94/255, green: 126/255, blue: 152/255)),
-    Event(id: 2, name: "Art",  color: Color(red: 94/255, green: 126/255, blue: 152/255)),
-    Event(id: 3, name: "Sport", color: Color(red: 94/255, green: 126/255, blue: 152/255)),
-]
 struct Box{
     var id:Int
     let imageURL: String
@@ -49,27 +38,58 @@ struct HomePage: View {
                                     Divider()
                                     BoxView()
                                 }
+
                             }
                         }
-                        
+                    Divider()
+
                     Text("All Categories")
                         .padding(.trailing, 240.0)
+                    
                     ScrollView(.horizontal) {
                         HStack {
-                            ForEach(events) { event in
-                                VStack {
-                                    
-                                    Text(event.name)
-                                        .font(.system(size: 14))
-                                        .frame(width:50,height: 70)
-                                        .font(.system(.caption))
-                                        .foregroundColor(.white)
-                                    
+                            NavigationLink(destination: CampsPage().navigationBarBackButtonHidden(true)){
+
+                                ZStack{
+                                    Text("Camps")
+                                        .foregroundColor(.black)
+                                        .frame(width: 150,height: 120)
+                                        .background(
+                                            RoundedRectangle(cornerRadius: 15, style: .continuous).fill(Color(red: 94/255, green: 126/255, blue: 152/255))
+                                        )
                                 }
-                                .padding(40)
-                                .background(event.color)
-                                .cornerRadius(15)
-                                //.shadow(radius: 6)
+
+                                ZStack{
+                                    NavigationLink(destination:EventsPage()){
+                                        Text("Events")
+                                            .foregroundColor(.black)
+                                            .frame(width: 150,height: 120)
+                                            .background(
+                                                RoundedRectangle(cornerRadius: 15, style: .continuous).fill(Color(red: 94/255, green: 126/255, blue: 152/255))
+                                            )
+                                    }
+                                }
+                                ZStack{
+                                    NavigationLink(destination:EventsPage()){
+                                        Text("Sport")
+                                            .foregroundColor(.black)
+                                            .frame(width: 150,height: 120)
+                                            .background(
+                                                RoundedRectangle(cornerRadius: 15, style: .continuous).fill(Color(red: 94/255, green: 126/255, blue: 152/255))
+                                            )
+                                    }
+                                }
+                                ZStack{
+                                    NavigationLink(destination:EventsPage()){
+                                        Text("Art")
+                                            .foregroundColor(.black)
+                                            .frame(width: 150,height: 120)
+                                            .background(
+                                                RoundedRectangle(cornerRadius: 15, style: .continuous).fill(Color(red: 94/255, green: 126/255, blue: 152/255))
+                                            )
+                                    }
+                                }
+                                    
                             }
                         }
                     }

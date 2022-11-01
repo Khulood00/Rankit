@@ -32,28 +32,32 @@ struct CampsPage: View {
         NavigationView{
                  VStack{
                     ScrollView(.horizontal){
-                        HStack{
+                        HStack(spacing:20){
                             
-                            NavigationLink(destination:EventPage()){
+                            NavigationLink(destination:EventPage().navigationBarBackButtonHidden(false)){
                                 Image("img1")
                                     .resizable()
                                     .scaledToFit()
                                     .cornerRadius(15)
-                                  // .shadow(radius: 5)
-                                    .frame(width:393, height: 200)
+                                    .padding(.leading)
+                                    .shadow(radius: 5)
+                                  .frame(width:345, height: 200)
+                              
                             }
                             Image("img2")
                                 .resizable()
                                 .scaledToFit()
                                 .cornerRadius(15)
-                            // .shadow(radius: 5)
-                                .frame(width:393, height: 200)
+                                .padding(.trailing)
+                                .shadow(radius: 5)
+                             .frame(width:345, height: 200)
                                 }
                         .searchable(text: $searchQuery)
                             
                     }
+                    .padding()
 
-            VStack{
+            VStack {
                 
                 Divider()
                 Text("Popular Techniqal Camps")
@@ -61,6 +65,7 @@ struct CampsPage: View {
                     .font(Font.custom("SF Comact", size: 20))
                     .foregroundColor(Color.black)
                     .padding(.trailing, 125.0)
+                    .bold()
                 Divider()
                 
             }
@@ -77,13 +82,17 @@ struct CampsPage: View {
                 
                     VStack(alignment: .leading){
                         Text(items.title)
-                        .font(Font.custom("SF Comact", size: 16))
+                        .font(Font.custom("SF Comact", size: 14))
                         .padding(.bottom, 7.0)
+                        .padding(.leading, 20)
+
                         
                         HStack{
                             
                             Image(systemName: "mappin.and.ellipse")
                                 .padding(.bottom, 3.0)
+                                .padding(.leading, 20.0)
+
                                 .foregroundStyle(.gray)
                                      .font(.system(size: 14.0))
                             
@@ -91,6 +100,8 @@ struct CampsPage: View {
                                 .font(Font.custom("SF Comact", size: 10))
                         }
                         Text(" ⭐️⭐️⭐️⭐️")
+                            .padding(.leading, 20.0)
+
                             .font(Font.custom("SF Comact", size: 10))
                     }
 
