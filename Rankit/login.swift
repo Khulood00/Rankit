@@ -9,9 +9,10 @@ import SwiftUI
 
 struct login: View {
     
-    @State private var email = ""
-    @State private var password = ""
-    @State private var showingLoginScreen = false
+    @State var email: String = ""
+    @State var password: String = ""
+    @State var showHide: String = ""
+    @State var showReviewSheet = false
     
     var body: some View {
         NavigationView(){
@@ -34,24 +35,25 @@ struct login: View {
                     
                     TextField("Email", text: $email)
                         .padding()
-                        .frame(width: 339, height: 53)
+                        .frame(width: 280, height: 50)
                         .background(Color.white)
                         .cornerRadius(8)
-                        
+                    
                     
                     TextField("Password", text: $password)
                         .padding()
-                        .frame(width: 339, height: 53)
+                        .frame(width: 280, height: 50)
                         .background(Color.white)
                         .cornerRadius(8)
                     
-                    Button("Log In ") {}
-                        .frame(maxWidth: 339 , maxHeight: 57)
+                    Button(action: {showReviewSheet.toggle()}, label: {Text("Log In")})
+                        .frame(maxWidth: 280 , maxHeight: 50)
                         .foregroundColor(.white)
                         .background(Color(red: 94/255, green: 126/255, blue: 152/255))
                         .cornerRadius(8)
                 }.padding(.top, 450)
-               
+                    .sheet(isPresented: $showReviewSheet, content: {})
+                
                 VStack {
                     Text("Log In")
                         .font(.system(size: 37, weight: .heavy))
@@ -59,7 +61,7 @@ struct login: View {
                     
                     Text("Wealcome Back")
                         .font(.system(size: 16))
-                        
+                    
                     
                 }.padding(.trailing,200)
                     .padding(.bottom, 30)

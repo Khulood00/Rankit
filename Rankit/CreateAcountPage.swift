@@ -9,11 +9,11 @@ import SwiftUI
 
 struct CreateAcountPage: View {
     
-    @State private var username = ""
-    @State private var email = ""
-    @State private var password = ""
-    @State private var confirm = ""
-    @State private var showingLoginScreen = false
+    @State var username = ""
+    @State var email = ""
+    @State var password = ""
+    @State var confirm = ""
+    @State var showVerfySheet = false
     
     var body: some View {
         NavigationView(){
@@ -27,7 +27,7 @@ struct CreateAcountPage: View {
                     .foregroundColor(Color(red: 237/255, green: 237/255, blue:237/255))
                     .frame(maxWidth: .infinity , maxHeight: .infinity)
                     .cornerRadius(27)
-                    .padding(.top, 380)
+                    .padding(.top, 340)
                     .shadow(radius: 15)
                     .ignoresSafeArea()
                 
@@ -35,36 +35,37 @@ struct CreateAcountPage: View {
                     
                     TextField("Full Name", text: $username)
                         .padding()
-                        .frame(width: 339, height: 53)
+                        .frame(width: 280, height: 50)
                         .background(Color.white)
                         .cornerRadius(8)
                     
                     TextField("Email", text: $email)
                         .padding()
-                        .frame(width: 339, height: 53)
+                        .frame(width: 280, height: 50)
                         .background(Color.white)
                         .cornerRadius(8)
-                        
+                    
                     
                     TextField("Password", text: $password)
                         .padding()
-                        .frame(width: 339, height: 53)
+                        .frame(width: 280, height: 50)
                         .background(Color.white)
                         .cornerRadius(8)
                     
                     TextField("Confirm Password", text: $confirm)
                         .padding()
-                        .frame(width: 339, height: 53)
+                        .frame(width: 280, height: 50)
                         .background(Color.white)
                         .cornerRadius(8)
                     
-                    Button("Sign up ") {}
-                        .frame(maxWidth: 339 , maxHeight: 57)
+                    Button(action: {showVerfySheet.toggle()}, label: {Text("Sign Up")})
+                        .frame(maxWidth: 280 , maxHeight: 50)
                         .foregroundColor(.white)
                         .background(Color(red: 94/255, green: 126/255, blue: 152/255))
                         .cornerRadius(8)
                 }.padding(.top, 350)
-               
+                    .sheet(isPresented: $showVerfySheet, content: {Verification()})
+                
                 VStack {
                     Text("Create Account")
                         .font(.system(size: 37, weight: .bold))
