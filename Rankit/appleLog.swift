@@ -1,17 +1,14 @@
 //
-//  LogInPage.swift
+//  appleLog.swift
 //  Rankit
 //
-//  Created by Wala Almuheef on 05/04/1444 AH.
+//  Created by Wala Almuheef on 07/04/1444 AH.
 //
 
 import SwiftUI
-import AuthenticationServices
 
-
-struct LogInPage: View {
+struct appleLog: View {
     var body: some View {
-        
         NavigationView{
             
             
@@ -35,7 +32,9 @@ struct LogInPage: View {
                                 .cornerRadius(8)
                             
                             Image(systemName:"envelope.circle.fill")
-                                .foregroundColor(.red)
+                                .foregroundColor(.white)
+                                .font(.system(size: 25))
+                                .padding(.trailing, 200)
                             
                         }.padding(.bottom, 17)
                         
@@ -48,8 +47,12 @@ struct LogInPage: View {
                                 .cornerRadius(8)
                             
                             Image(systemName:"envelope.circle.fill")
-                                .foregroundColor(.red)
+                                .foregroundColor(.white)
+                                .font(.system(size: 25))
+                                .padding(.trailing, 200)
+                            
                         }.padding(.bottom, 70)
+                        
                         
                     
                     HStack{
@@ -65,11 +68,10 @@ struct LogInPage: View {
             }
         }
     }
+    
 
-
-struct LogInPage_Previews: PreviewProvider {
+struct appleLog_Previews: PreviewProvider {
     static var previews: some View {
-        LogInPage()
+        appleLog()
     }
 }
-
