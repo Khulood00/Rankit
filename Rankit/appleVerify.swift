@@ -29,14 +29,15 @@ struct appleVerify: View {
                     
                     HStack(){
                         Text("Apple ID")
+                            .fontWeight(.heavy)
                         Spacer()
                         NavigationLink("Cancel", destination: appleLog())
                     }.padding(.leading, 30)
                         .padding(.trailing, 30)
                     
-                        
+                    
                     Text("Do you want to sign with R….@gmail.com?")
-                        Divider()
+                    Divider()
                         .padding()
                     
                     HStack(){
@@ -50,7 +51,7 @@ struct appleVerify: View {
                         .padding(.trailing, 30)
                     Divider()
                         .padding()
-                        
+                    
                     
                     HStack(){
                         Text("Email")
@@ -61,39 +62,39 @@ struct appleVerify: View {
                         Image(systemName: "checkmark.circle.fill")
                     }.padding(.leading, 30)
                         .padding(.trailing, 30)
-                        
-                        
-                        
-                        Button(action: {showReviewSheet.toggle()}, label: {Text("Continue")})
-                            .frame(maxWidth: 280 , maxHeight: 50)
-                            .foregroundColor(.white)
-                            .background(Color(red: 94/255, green: 126/255, blue: 152/255))
-                            .cornerRadius(8)
+                    
+                    
+                    
+                    Button(action: {showReviewSheet.toggle()}, label: {Text("Continue")})
+                        .frame(maxWidth: 280 , maxHeight: 50)
+                        .foregroundColor(.white)
+                        .background(Color(red: 94/255, green: 126/255, blue: 152/255))
+                        .cornerRadius(8)
                 }
                 .padding(.top, 390)
-                        .sheet(isPresented: $showReviewSheet, content:{})
-                    
+                .sheet(isPresented: $showReviewSheet, content:{})
+                
                 VStack(alignment: .center, spacing: 10){
-                        Text("Rate learns what you like and leads you to Things you’ll like.")
-                            .font(.system(size: 18, weight: .bold))
-                            .foregroundColor(Color.black)
-                    }
-                    .padding(.bottom, 200)
+                    Text("Rate learns what you like and leads you to Things you’ll like.")
+                        .font(.system(size: 18, weight: .bold))
+                        .foregroundColor(Color.black)
                 }
-                
-                .navigationTitle("Apple Verification")
-                .navigationBarTitleDisplayMode(.inline)
-                .navigationBarHidden(true)
-                
-                
+                .padding(.bottom, 200)
             }
             
+            .navigationTitle("Apple Verification")
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarHidden(true)
+            
+            
         }
+        
     }
-    
-    struct appleVerify_Previews: PreviewProvider {
-        static var previews: some View {
-            appleVerify()
-        }
+}
+
+struct appleVerify_Previews: PreviewProvider {
+    static var previews: some View {
+        appleVerify()
     }
+}
 
