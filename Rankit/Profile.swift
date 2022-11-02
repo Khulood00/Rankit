@@ -9,9 +9,35 @@ import SwiftUI
 
 struct Profile: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+        
+        
+      
+
+        VStack{
+            VStack{
+                
+                
+                Image(systemName: "person.fill")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 120, height: 120)
+                    .foregroundColor(Color(red: 0.377, green: 0.506, blue: 0.606))
+                    .clipShape(Circle())
+                Text("Add photo")
+                    
+            }
+        }
+        
+        
+        
+        
+        
+        
+              }
 }
+
+
+
 
 struct Profile_Previews: PreviewProvider {
     static var previews: some View {
