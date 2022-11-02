@@ -26,7 +26,7 @@ struct HomePage: View {
     @State private var selectedTab = 0
 
     var body: some View {
-        NavigationView{
+      NavigationView{
 
         HStack{
                 VStack{
@@ -38,7 +38,6 @@ struct HomePage: View {
                                     Divider()
                                     BoxView()
                                 }
-
                             }
                         }
                     Divider()
@@ -52,7 +51,7 @@ struct HomePage: View {
 
                                 ZStack{
                                     Text("Camps")
-                                        .foregroundColor(.black)
+                                        .foregroundColor(.white)
                                         .frame(width: 150,height: 120)
                                         .background(
                                             RoundedRectangle(cornerRadius: 15, style: .continuous).fill(Color(red: 94/255, green: 126/255, blue: 152/255))
@@ -62,7 +61,7 @@ struct HomePage: View {
                                 ZStack{
                                     NavigationLink(destination:EventsPage()){
                                         Text("Events")
-                                            .foregroundColor(.black)
+                                            .foregroundColor(.white)
                                             .frame(width: 150,height: 120)
                                             .background(
                                                 RoundedRectangle(cornerRadius: 15, style: .continuous).fill(Color(red: 94/255, green: 126/255, blue: 152/255))
@@ -72,7 +71,7 @@ struct HomePage: View {
                                 ZStack{
                                     NavigationLink(destination:EventsPage()){
                                         Text("Sport")
-                                            .foregroundColor(.black)
+                                            .foregroundColor(.white)
                                             .frame(width: 150,height: 120)
                                             .background(
                                                 RoundedRectangle(cornerRadius: 15, style: .continuous).fill(Color(red: 94/255, green: 126/255, blue: 152/255))
@@ -82,7 +81,7 @@ struct HomePage: View {
                                 ZStack{
                                     NavigationLink(destination:EventsPage()){
                                         Text("Art")
-                                            .foregroundColor(.black)
+                                            .foregroundColor(.white)
                                             .frame(width: 150,height: 120)
                                             .background(
                                                 RoundedRectangle(cornerRadius: 15, style: .continuous).fill(Color(red: 94/255, green: 126/255, blue: 152/255))
@@ -99,9 +98,9 @@ struct HomePage: View {
                 
                 .searchable(text: $searchQuery)
                 .navigationTitle("Home")
-                .navigationBarTitleDisplayMode(.inline)
+              //  .navigationBarTitleDisplayMode(.inline)
             }
-        }
+       }
     }
     struct BoxView: View{
         var body : some View{
