@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct EventPage: View {
+    @State var isPresent = false
+    @State var isValid = false
+    @State var isTrue = false
     var body: some View {
-        
+       
         NavigationView{
             
             ZStack{
@@ -26,6 +29,8 @@ struct EventPage: View {
                         .padding(.top,8.0)
                         .padding(.trailing, 295.0)
                     
+                    
+                    // The details of camps
                     Group{
                         Text("Apple Developer Academy")
                             .font(.headline)
@@ -44,7 +49,6 @@ struct EventPage: View {
                                 
                                 Image(systemName: "clock") .imageScale(.large)
                                     .foregroundColor(Color(red: 0.334, green: 0.462, blue: 0.571))
-                                
                             }
                             
                             VStack{
@@ -63,10 +67,8 @@ struct EventPage: View {
                                     .clipShape(Rectangle())
                                     .scaledToFit()
                             }.padding(.leading, 105)
-                            
-                            
-                        }
                         
+                        }
                         
                         
                         Text("About")
@@ -90,46 +92,43 @@ struct EventPage: View {
                             .cornerRadius(10)
                             .padding()
                             .scaledToFit()
-                        
                     }
+                    
+                    // The buttons
                     Group{
                         HStack{
-                            NavigationLink(destination:ReviewsPage()){
+                         
                                 
                                 Button {
                                     print("test")
+                                    isPresent = true
                                 } label: {
                                     VStack{
                                         Image(systemName: "plus.bubble")
                                         Text("Reviews")
                                     }
+
+                                    NavigationLink(destination:ReviewsPage(), isActive: $isPresent){}
                                 } .frame(width: 110, height: 67)
                                     .foregroundColor(.white)
                                     .background(Color(red: 0.367, green: 0.49, blue: 0.598))
                                     .cornerRadius(8)
-                                
-                            }
-                            
-                            
-                            
-                            
+                     
                             Button {
                                 print("test")
+                                isValid = true
                             } label: {
                                 VStack{
                                     Image(systemName: "heart.fill")
                                     Text("Wish List")
                                 }
+                                NavigationLink(destination:WishList(), isActive: $isValid){}
                             }
-                            .frame(width: 110, height: 67)
+                                                    .frame(width: 110, height: 67)
                             .foregroundColor(Color(red: 0.334, green: 0.462, blue: 0.567))
                             .background(Color(red: 0.918, green: 0.918, blue: 0.918))
                             .cornerRadius(8)
-                            
-                            
-                            
-                            
-                            
+                    
                             Button {
                                 print("test")
                             } label: {
@@ -142,9 +141,12 @@ struct EventPage: View {
                                 .foregroundColor(.white)
                                 .background(Color(red: 0.367, green: 0.49, blue: 0.598))
                                 .cornerRadius(8)
-                            
                         }
                     }
+                    
+                    
+                    // Rating and Reviews details
+                    
                     Group{
                         
                         Text("Rating & Reviews")
@@ -172,7 +174,7 @@ struct EventPage: View {
                                 
                                 
                                 VStack{
-                                    Image("newstars")
+                                    Image("5")
                                         .resizable()
                                         .frame(width: 110, height: 30)
                                     //.scaledToFit()
@@ -183,41 +185,29 @@ struct EventPage: View {
                                     
                                 }.padding(.trailing, -120.0)
                             }
-                            
-                            
-                            
-                            
-                            
-                            
-                            
+                           
                             
                         }
                     }
                     
                     Group{
                         
-                        
-                        
-                        
-                        //  List {
-                        
-                        ReviewItem()
+                        ReviewItem(review: .init(name: "Malak", ratting: 5, comment: "Highly Recommended", time: .now))
                         Rectangle()
                             .frame(width: 350.0)
                             .foregroundColor(/*@START_MENU_TOKEN@*/Color(red: 0.885, green: 0.89, blue: 0.886)/*@END_MENU_TOKEN@*/)
                             .frame(height: 1.0, alignment: .bottom)
-                        ReviewItem()
+                        
+                        ReviewItem(review: .init(name: "Sara", ratting: 5, comment: "I enjoyed", time: .now))
+                        
                         Rectangle()
                             .frame(width: 350.0)
                             .foregroundColor(/*@START_MENU_TOKEN@*/Color(red: 0.885, green: 0.89, blue: 0.886)/*@END_MENU_TOKEN@*/)
                             .frame(height: 1.0, alignment: .bottom)
-                        ReviewItem()
+                        ReviewItem(review: .init(name: "Dana", ratting: 5, comment: "Good environment to learn", time: .now))
                         
-                        //  }
                         
                     }
-                    
-                    
                     
                     
                 }
