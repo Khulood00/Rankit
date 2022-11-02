@@ -57,8 +57,6 @@ struct EventsPage: View {
                                 .shadow(radius: 5)
                               .frame(width:345, height: 200)
                                 }
-                        .searchable(text: $searchQuery)
-                            
                     }
                     .padding()
 
@@ -113,8 +111,11 @@ struct EventsPage: View {
                     }
         }
         }
+                 .searchable(text: $searchQuery)
+                .navigationTitle("Events")
             
     }
+
         
     }
     
