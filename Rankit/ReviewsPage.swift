@@ -9,7 +9,16 @@ import SwiftUI
 
 struct ReviewsPage: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            VStack{
+                Image("Group")
+                    .resizable()
+                           .aspectRatio(1.0, contentMode: .fit)
+                    .cornerRadius(5)
+                    .shadow(color: .gray, radius: 10, x: 0, y: 0)
+            }
+                .padding(.bottom, 590)
+        }
     }
 }
 
