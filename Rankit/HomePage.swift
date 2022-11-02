@@ -9,83 +9,103 @@ import SwiftUI
 import UIKit
 
 
-struct Event: Identifiable {
-    let id: Int
-    let name: String
-    let color: Color
-}
-
-let events = [
-    Event(id: 0, name: "Tech Camps",  color: Color(red: 94/255, green: 126/255, blue: 152/255)),
-    Event(id: 1, name: "Events",  color: Color(red: 94/255, green: 126/255, blue: 152/255)),
-    Event(id: 2, name: "Art",  color: Color(red: 94/255, green: 126/255, blue: 152/255)),
-    Event(id: 3, name: "Sport", color: Color(red: 94/255, green: 126/255, blue: 152/255)),
-]
 struct Box{
     var id:Int
     let imageURL: String
 }
-struct HomePage: View {
-    @State private var selectedTab = 0
 
+struct HomePage: View {
+    
     let boxes:[Box] = [
         Box(id : 0 , imageURL:"0"),
         Box(id : 1 , imageURL:"1"),
-       
-
+        Box(id : 2 , imageURL:"2"),
     ]
-    
     @State var searchQuery = ""
     @State private var selection = 2
+    @State private var selectedTab = 0
 
     var body: some View {
-            ZStack{
-                NavigationView{
-                    VStack{
-                        NavigationView{
-                            VStack{
-                                Text("Just For You")
-                                    .padding(.trailing, 260.0)
-                                ScrollView(.horizontal){
-                                    HStack(spacing: 10){
-                                        Divider()
-                                        BoxView()
-                                        
-                                    }
+        NavigationView{
+
+        HStack{
+                VStack{
+                        VStack{
+                            Text("Just For You")
+                                .padding(.trailing, 260.0)
+                            ScrollView(.horizontal){
+                                HStack(spacing: 10){
+                                    Divider()
+                                    BoxView()
                                 }
+
                             }
-                            
                         }
-                        Text("All Categories")
-                            .padding(.trailing, 240.0)
-                        ScrollView(.horizontal) {
-                                    HStack {
-                                        ForEach(events) { event in
-                                            VStack {
-                                            
-                                                Text(event.name)
-                                                    .font(.system(.caption))
-                                                    .foregroundColor(.white)
-                                                    
-                                            }
-                                            .padding(40)
-                                            .background(event.color)
-                                            .cornerRadius(15)
-                                        }
+                    Divider()
+
+                    Text("All Categories")
+                        .padding(.trailing, 240.0)
+                    
+                    ScrollView(.horizontal) {
+                        HStack {
+                            NavigationLink(destination: CampsPage().navigationBarBackButtonHidden(true)){
+
+                                ZStack{
+                                    Text("Camps")
+                                        .foregroundColor(.black)
+                                        .frame(width: 150,height: 120)
+                                        .background(
+                                            RoundedRectangle(cornerRadius: 15, style: .continuous).fill(Color(red: 94/255, green: 126/255, blue: 152/255))
+                                        )
+                                }
+
+                                ZStack{
+                                    NavigationLink(destination:EventsPage()){
+                                        Text("Events")
+                                            .foregroundColor(.black)
+                                            .frame(width: 150,height: 120)
+                                            .background(
+                                                RoundedRectangle(cornerRadius: 15, style: .continuous).fill(Color(red: 94/255, green: 126/255, blue: 152/255))
+                                            )
                                     }
                                 }
-                                .padding()
+                                ZStack{
+                                    NavigationLink(destination:EventsPage()){
+                                        Text("Sport")
+                                            .foregroundColor(.black)
+                                            .frame(width: 150,height: 120)
+                                            .background(
+                                                RoundedRectangle(cornerRadius: 15, style: .continuous).fill(Color(red: 94/255, green: 126/255, blue: 152/255))
+                                            )
+                                    }
+                                }
+                                ZStack{
+                                    NavigationLink(destination:EventsPage()){
+                                        Text("Art")
+                                            .foregroundColor(.black)
+                                            .frame(width: 150,height: 120)
+                                            .background(
+                                                RoundedRectangle(cornerRadius: 15, style: .continuous).fill(Color(red: 94/255, green: 126/255, blue: 152/255))
+                                            )
+                                    }
+                                }
+                                    
+                            }
+                        }
                     }
-                    
-                    
-                    .searchable(text: $searchQuery)
-                    .navigationTitle("Home")
-                    .navigationBarTitleDisplayMode(.inline)
+                    .padding()
                 }
+                
+                
+                .searchable(text: $searchQuery)
+                .navigationTitle("Home")
+                .navigationBarTitleDisplayMode(.inline)
+            }
         }
     }
     struct BoxView: View{
         var body : some View{
+            
             HStack{
                 Image("0")
                     .resizable()
@@ -96,12 +116,17 @@ struct HomePage: View {
                     .resizable()
                     .frame(width: 186,height: 320)
                     .cornerRadius(15)
+                
+                Image("2")
+                    .resizable()
+                    .frame(width: 186,height: 320)
+                    .cornerRadius(15)
             }
         }
     }
-}
-struct HomePage_Previews: PreviewProvider {
-    static var previews: some View {
-        HomePage()
+    struct HomePage_Previews: PreviewProvider {
+        static var previews: some View {
+            HomePage()
+        }
     }
 }
