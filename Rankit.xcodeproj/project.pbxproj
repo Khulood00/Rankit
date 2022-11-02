@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A9E5F08290E60B9003A6679 /* LogInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E5F07290E60B9003A6679 /* LogInPage.swift */; };
+		3A9E5F0C2910ED57003A6679 /* CreateAcountPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E5F0B2910ED57003A6679 /* CreateAcountPage.swift */; };
+		3A9E5F10291104EF003A6679 /* appleLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E5F0F291104EF003A6679 /* appleLog.swift */; };
+		3A9E5F12291109F7003A6679 /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E5F11291109F7003A6679 /* login.swift */; };
+		3A9E5F1629111323003A6679 /* Verification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E5F1529111323003A6679 /* Verification.swift */; };
+		3A9E5F1829123EEE003A6679 /* appleVerify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E5F1729123EEE003A6679 /* appleVerify.swift */; };
 		A4BFDEAF290D8AF900446DE5 /* WishList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFDEAE290D8AF900446DE5 /* WishList.swift */; };
 		A4BFDEB1290D8B0700446DE5 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFDEB0290D8B0700446DE5 /* Profile.swift */; };
 		A4BFDEB3290D90FD00446DE5 /* HostingTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFDEB2290D90FD00446DE5 /* HostingTabBar.swift */; };
@@ -19,11 +23,17 @@
 		A4D8B1092909560200E137E7 /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D8B1082909560200E137E7 /* Splash.swift */; };
 		A4D8B10D2909AF8D00E137E7 /* InterestPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D8B10C2909AF8D00E137E7 /* InterestPage.swift */; };
 		A4D8B10F290A4E6300E137E7 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D8B10E290A4E6300E137E7 /* HomePage.swift */; };
+		A80B5F6C29110D750099A57C /* ReviewsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80B5F6B29110D750099A57C /* ReviewsPage.swift */; };
+		A80B5F6E291110A60099A57C /* ReviewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80B5F6D291110A60099A57C /* ReviewItem.swift */; };
 		A8EE7097290E4CDA0095C41F /* EventPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EE7096290E4CDA0095C41F /* EventPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3A9E5F07290E60B9003A6679 /* LogInPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInPage.swift; sourceTree = "<group>"; };
+		3A9E5F0B2910ED57003A6679 /* CreateAcountPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAcountPage.swift; sourceTree = "<group>"; };
+		3A9E5F0F291104EF003A6679 /* appleLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appleLog.swift; sourceTree = "<group>"; };
+		3A9E5F11291109F7003A6679 /* login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
+		3A9E5F1529111323003A6679 /* Verification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verification.swift; sourceTree = "<group>"; };
+		3A9E5F1729123EEE003A6679 /* appleVerify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appleVerify.swift; sourceTree = "<group>"; };
 		A4BFDEAE290D8AF900446DE5 /* WishList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishList.swift; sourceTree = "<group>"; };
 		A4BFDEB0290D8B0700446DE5 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		A4BFDEB2290D90FD00446DE5 /* HostingTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingTabBar.swift; sourceTree = "<group>"; };
@@ -36,6 +46,8 @@
 		A4D8B1082909560200E137E7 /* Splash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
 		A4D8B10C2909AF8D00E137E7 /* InterestPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestPage.swift; sourceTree = "<group>"; };
 		A4D8B10E290A4E6300E137E7 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		A80B5F6B29110D750099A57C /* ReviewsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsPage.swift; sourceTree = "<group>"; };
+		A80B5F6D291110A60099A57C /* ReviewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewItem.swift; sourceTree = "<group>"; };
 		A8EE7096290E4CDA0095C41F /* EventPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +92,13 @@
 				A4BFDEB0290D8B0700446DE5 /* Profile.swift */,
 				A8EE7096290E4CDA0095C41F /* EventPage.swift */,
 				3A9E5F07290E60B9003A6679 /* LogInPage.swift */,
+				A80B5F6D291110A60099A57C /* ReviewItem.swift */,
+				A80B5F6B29110D750099A57C /* ReviewsPage.swift */,
+				3A9E5F0F291104EF003A6679 /* appleLog.swift */,
+				3A9E5F1729123EEE003A6679 /* appleVerify.swift */,
+				3A9E5F11291109F7003A6679 /* login.swift */,
+				3A9E5F0B2910ED57003A6679 /* CreateAcountPage.swift */,
+				3A9E5F1529111323003A6679 /* Verification.swift */,
 				A4D8B0FE2909554A00E137E7 /* Assets.xcassets */,
 				A4D8B1002909554A00E137E7 /* Preview Content */,
 			);
@@ -164,17 +183,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A9E5F1629111323003A6679 /* Verification.swift in Sources */,
+				3A9E5F0C2910ED57003A6679 /* CreateAcountPage.swift in Sources */,
 				A4D8B1092909560200E137E7 /* Splash.swift in Sources */,
 				A8EE7097290E4CDA0095C41F /* EventPage.swift in Sources */,
+				A80B5F6C29110D750099A57C /* ReviewsPage.swift in Sources */,
 				A4BFDEB1290D8B0700446DE5 /* Profile.swift in Sources */,
 				A4BFDEB5290E74EB00446DE5 /* CampsPage.swift in Sources */,
 				A4D8B0FB2909554900E137E7 /* RankitApp.swift in Sources */,
 				A4BFDEBB2910504900446DE5 /* EventsPage.swift in Sources */,
 				3A9E5F08290E60B9003A6679 /* LogInPage.swift in Sources */,
 				A4D8B10D2909AF8D00E137E7 /* InterestPage.swift in Sources */,
+				3A9E5F12291109F7003A6679 /* login.swift in Sources */,
+				3A9E5F1829123EEE003A6679 /* appleVerify.swift in Sources */,
 				A4D8B10F290A4E6300E137E7 /* HomePage.swift in Sources */,
+				3A9E5F10291104EF003A6679 /* appleLog.swift in Sources */,
 				A4BFDEB3290D90FD00446DE5 /* HostingTabBar.swift in Sources */,
 				A4BFDEAF290D8AF900446DE5 /* WishList.swift in Sources */,
+				A80B5F6E291110A60099A57C /* ReviewItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
