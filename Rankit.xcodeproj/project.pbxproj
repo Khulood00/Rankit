@@ -11,6 +11,7 @@
 		3A9E5F10291104EF003A6679 /* appleLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E5F0F291104EF003A6679 /* appleLog.swift */; };
 		3A9E5F12291109F7003A6679 /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E5F11291109F7003A6679 /* login.swift */; };
 		3A9E5F1629111323003A6679 /* Verification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E5F1529111323003A6679 /* Verification.swift */; };
+		3A9E5F1829123EEE003A6679 /* appleVerify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E5F1729123EEE003A6679 /* appleVerify.swift */; };
 		A4BFDEAF290D8AF900446DE5 /* WishList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFDEAE290D8AF900446DE5 /* WishList.swift */; };
 		A4BFDEB1290D8B0700446DE5 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFDEB0290D8B0700446DE5 /* Profile.swift */; };
 		A4BFDEB3290D90FD00446DE5 /* HostingTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFDEB2290D90FD00446DE5 /* HostingTabBar.swift */; };
@@ -28,6 +29,7 @@
 		3A9E5F0F291104EF003A6679 /* appleLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appleLog.swift; sourceTree = "<group>"; };
 		3A9E5F11291109F7003A6679 /* login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
 		3A9E5F1529111323003A6679 /* Verification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verification.swift; sourceTree = "<group>"; };
+		3A9E5F1729123EEE003A6679 /* appleVerify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appleVerify.swift; sourceTree = "<group>"; };
 		A4BFDEAE290D8AF900446DE5 /* WishList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishList.swift; sourceTree = "<group>"; };
 		A4BFDEB0290D8B0700446DE5 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		A4BFDEB2290D90FD00446DE5 /* HostingTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingTabBar.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				A4BFDEB0290D8B0700446DE5 /* Profile.swift */,
 				A8EE7096290E4CDA0095C41F /* EventPage.swift */,
 				3A9E5F0F291104EF003A6679 /* appleLog.swift */,
+				3A9E5F1729123EEE003A6679 /* appleVerify.swift */,
 				3A9E5F11291109F7003A6679 /* login.swift */,
 				3A9E5F0B2910ED57003A6679 /* CreateAcountPage.swift */,
 				3A9E5F1529111323003A6679 /* Verification.swift */,
@@ -175,6 +178,7 @@
 				A4D8B0FB2909554900E137E7 /* RankitApp.swift in Sources */,
 				A4D8B10D2909AF8D00E137E7 /* InterestPage.swift in Sources */,
 				3A9E5F12291109F7003A6679 /* login.swift in Sources */,
+				3A9E5F1829123EEE003A6679 /* appleVerify.swift in Sources */,
 				A4D8B10F290A4E6300E137E7 /* HomePage.swift in Sources */,
 				3A9E5F10291104EF003A6679 /* appleLog.swift in Sources */,
 				A4BFDEB3290D90FD00446DE5 /* HostingTabBar.swift in Sources */,
