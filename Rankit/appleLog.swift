@@ -50,7 +50,7 @@ struct appleLog: View {
                         .padding(.trailing, 150)
                     
                 }.padding(.bottom, 17)
-                    .sheet(isPresented: $showAppleSheet, content: {})
+                    .sheet(isPresented: $showAppleSheet, content: {appleVerify()})
                 
                 ZStack(){
                     

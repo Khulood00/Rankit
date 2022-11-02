@@ -21,7 +21,7 @@ struct appleVerify: View {
                     .foregroundColor(Color(red: 237/255, green: 237/255, blue:237/255))
                     .frame(maxWidth: .infinity , maxHeight: .infinity)
                     .cornerRadius(27)
-                    .padding(.top, 420)
+                    .padding(.top, 380)
                     .shadow(radius: 15)
                     .ignoresSafeArea()
                 
@@ -72,7 +72,7 @@ struct appleVerify: View {
                         .cornerRadius(8)
                 }
                 .padding(.top, 390)
-                .sheet(isPresented: $showReviewSheet, content:{})
+                .sheet(isPresented: $showReviewSheet, content:{ReviewsPage()})
                 
                 VStack(alignment: .center, spacing: 10){
                     Text("Rate learns what you like and leads you to Things you’ll like.")

@@ -52,7 +52,7 @@ struct login: View {
                         .background(Color(red: 94/255, green: 126/255, blue: 152/255))
                         .cornerRadius(8)
                 }.padding(.top, 450)
-                    .sheet(isPresented: $showReviewSheet, content: {})
+                    .sheet(isPresented: $showReviewSheet, content: {ReviewsPage()})
                 
                 VStack {
                     Text("Log In")
