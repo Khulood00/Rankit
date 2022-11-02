@@ -7,31 +7,34 @@
 
 import SwiftUI
 
+struct Reviews {
+    var id = UUID()
+    var name : String
+    var ratting: Int
+    var comment: String
+    var time: Date
+}
 struct ReviewItem: View {
     
- //   let name : String
-    //let stars : Image
-    //let text : String
-    //let clock : Image
-    //let day : String
-   
+    @State var review : Reviews
+    
     var body: some View {
      
         // First user review
         HStack {
             VStack {
-                Text("Malak")
-                Image("newstars")
-                                                       .resizable()
-                                                       .frame(width: 103.0, height: 25.0)
-                                                       .clipShape(Rectangle())
-                                                       .scaledToFit()
+                Text(review.name)
+                Image("\(review.ratting)")
+                .resizable()
+                .frame(width: 103.0, height: 25.0)
+                .clipShape(Rectangle())
+                .scaledToFit()
 
-                Text("Highly Recommended")
+                Text(review.comment)
             }
             Spacer()
             Image(systemName: "clock")
-            Text("Today")
+            Text(review.time, format: .dateTime)
             
             
             
@@ -46,7 +49,6 @@ struct ReviewItem: View {
 
 struct ReviewItem_Previews: PreviewProvider {
     static var previews: some View {
-       
-        ReviewItem()
+        ReviewItem(review: .init(name: "cl", ratting: 5, comment: "dlodf", time: .now))
     }
 }
