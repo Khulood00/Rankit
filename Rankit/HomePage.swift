@@ -51,6 +51,7 @@ struct HomePage: View {
 
                                 ZStack{
                                     Text("Camps")
+                                        .fontWeight(.bold)
                                         .foregroundColor(.white)
                                         .frame(width: 116,height: 197)
                                         .background(
@@ -61,6 +62,7 @@ struct HomePage: View {
                                 ZStack{
                                     NavigationLink(destination:EventsPage()){
                                         Text("Events")
+                                            .fontWeight(.bold)
                                             .foregroundColor(.white)
                                             .frame(width: 116,height: 197)
                                             .background(
@@ -71,6 +73,7 @@ struct HomePage: View {
                                 ZStack{
                                     NavigationLink(destination:EventsPage()){
                                         Text("Sport")
+                                            .fontWeight(.bold)
                                             .foregroundColor(.white)
                                             .frame(width: 116,height: 197)
                                             .background(
@@ -80,6 +83,7 @@ struct HomePage: View {
                                 ZStack{
                                     NavigationLink(destination:EventsPage()){
                                         Text("Art")
+                                            .fontWeight(.bold)
                                             .foregroundColor(.white)
                                             .frame(width: 116,height: 197)
                                             .background(
