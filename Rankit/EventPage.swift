@@ -105,7 +105,7 @@ struct EventPage: View {
                                         Text("Reviews")
                                     }
 
-                                    NavigationLink(destination:appleLog(), isActive: $isPresent){}
+                                    NavigationLink(destination:appleLog().navigationBarBackButtonHidden(true), isActive: $isPresent){}
                                 } .frame(width: 110, height: 67)
                                     .foregroundColor(.white)
                                     .background(Color(red: 0.367, green: 0.49, blue: 0.598))
@@ -126,9 +126,7 @@ struct EventPage: View {
                             .background(Color(red: 0.918, green: 0.918, blue: 0.918))
                             .cornerRadius(8)
                     
-                            Button {
-                                print("test")
-                            } label: {
+                            Button(action: actionSheet) {
                                 VStack{
                                     Image(systemName: "square.and.arrow.up")
                                     
@@ -220,7 +218,15 @@ struct EventPage: View {
             }
         }
     }
+    
+    func actionSheet() {
+           guard let urlShare = URL(string: "https://developer.apple.com/xcode/swiftui/") else { return }
+           let activityVC = UIActivityViewController(activityItems: [urlShare], applicationActivities: nil)
+           UIApplication.shared.windows.first?.rootViewController?.present(activityVC, animated: true, completion: nil)
+       }
 }
+
+
     
     struct EventPage_Previews: PreviewProvider {
         static var previews: some View {
