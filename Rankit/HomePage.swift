@@ -120,6 +120,8 @@ struct HomePage: View {
                     .resizable()
                     .frame(width: 186,height: 320)
                     .cornerRadius(15)
+                
+              
             }
         }
     }

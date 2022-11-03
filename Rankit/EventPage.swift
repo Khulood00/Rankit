@@ -210,11 +210,7 @@ struct EventPage: View {
                         
                     }
                     
-                    
-                    
-                    
-                    
-                    
+         
                     
                 }
             }
