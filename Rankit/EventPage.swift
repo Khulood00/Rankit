@@ -120,11 +120,10 @@ struct EventPage: View {
                                     Text("Wish List")
                                 }
                                 NavigationLink(destination:WishList(), isActive: $isValid){}
-                            }
-                                                    .frame(width: 110, height: 67)
-                            .foregroundColor(Color(red: 0.334, green: 0.462, blue: 0.567))
-                            .background(Color(red: 0.918, green: 0.918, blue: 0.918))
-                            .cornerRadius(8)
+                            }.frame(width: 110, height: 67)
+                                .foregroundColor(.white)
+                                .background(Color(red: 0.367, green: 0.49, blue: 0.598))
+                                .cornerRadius(8)
                     
                             Button(action: actionSheet) {
                                 VStack{
