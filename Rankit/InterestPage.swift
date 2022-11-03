@@ -75,14 +75,17 @@ struct TagsView: View {
                         NavigationLink {HomePage().navigationBarBackButtonHidden(true)}
                     label: {
                         Text("Skip")
+                            .fontWeight(.medium)
+                            .foregroundColor(Color(red: 94/255, green: 126/255, blue: 152/255))
                             .font(.title2)
                     }
                     }
                     .padding(30)
                     Text("Select Your Interest")
+                        .fontWeight(.medium)
                         .multilineTextAlignment(.center)
                         .font(.title)
-                        .padding(.bottom, 100.0)
+                        .padding(.bottom, 70)
                     
                     
                     ScrollView {
@@ -104,14 +107,15 @@ struct TagsView: View {
                         }
                     }
                     VStack{
-                        Button("Let's Go!") {
+                        Button("LET'S GO!") {
                                             isPresenting = true
                                         }.frame(width: 300)
-                            .font(.system(size: 24))
-                            .padding()
+                            .font(.title)
+                            .fontWeight(.medium)
+                            .padding(7)
                             .foregroundColor(.white)
                             .background(Color(red: 94/255, green: 126/255, blue: 152/255))
-                            .cornerRadius(10)
+                            .cornerRadius(14)
                                         NavigationLink(destination: HomePage().navigationBarBackButtonHidden(true), isActive: $isPresenting) { }
                             
                                     
