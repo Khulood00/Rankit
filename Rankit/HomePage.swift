@@ -52,9 +52,9 @@ struct HomePage: View {
                                 ZStack{
                                     Text("Camps")
                                         .foregroundColor(.white)
-                                        .frame(width: 150,height: 120)
+                                        .frame(width: 116,height: 197)
                                         .background(
-                                            RoundedRectangle(cornerRadius: 15, style: .continuous).fill(Color(red: 94/255, green: 126/255, blue: 152/255))
+                                            RoundedRectangle(cornerRadius: 15, style: .continuous).fill(backgroundGradient)
                                         )
                                 }
 
@@ -62,9 +62,9 @@ struct HomePage: View {
                                     NavigationLink(destination:EventsPage()){
                                         Text("Events")
                                             .foregroundColor(.white)
-                                            .frame(width: 150,height: 120)
+                                            .frame(width: 116,height: 197)
                                             .background(
-                                                RoundedRectangle(cornerRadius: 15, style: .continuous).fill(Color(red: 94/255, green: 126/255, blue: 152/255))
+                                                RoundedRectangle(cornerRadius: 15, style: .continuous).fill(backgroundGradient)
                                             )
                                     }
                                 }
@@ -72,19 +72,18 @@ struct HomePage: View {
                                     NavigationLink(destination:EventsPage()){
                                         Text("Sport")
                                             .foregroundColor(.white)
-                                            .frame(width: 150,height: 120)
+                                            .frame(width: 116,height: 197)
                                             .background(
-                                                RoundedRectangle(cornerRadius: 15, style: .continuous).fill(Color(red: 94/255, green: 126/255, blue: 152/255))
-                                            )
+                                                RoundedRectangle(cornerRadius: 15, style: .continuous).fill(backgroundGradient))
                                     }
                                 }
                                 ZStack{
                                     NavigationLink(destination:EventsPage()){
                                         Text("Art")
                                             .foregroundColor(.white)
-                                            .frame(width: 150,height: 120)
+                                            .frame(width: 116,height: 197)
                                             .background(
-                                                RoundedRectangle(cornerRadius: 15, style: .continuous).fill(Color(red: 94/255, green: 126/255, blue: 152/255))
+                                                RoundedRectangle(cornerRadius: 15, style: .continuous).fill(backgroundGradient)
                                             )
                                     }
                                 }
