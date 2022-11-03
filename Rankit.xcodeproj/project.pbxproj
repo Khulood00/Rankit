@@ -26,6 +26,7 @@
 		A80B5F6C29110D750099A57C /* ReviewsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80B5F6B29110D750099A57C /* ReviewsPage.swift */; };
 		A80B5F6E291110A60099A57C /* ReviewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80B5F6D291110A60099A57C /* ReviewItem.swift */; };
 		A8EE7097290E4CDA0095C41F /* EventPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EE7096290E4CDA0095C41F /* EventPage.swift */; };
+		FCAE4ED92912BCB10060F4FE /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAE4ED82912BCB10060F4FE /* RatingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		A80B5F6B29110D750099A57C /* ReviewsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsPage.swift; sourceTree = "<group>"; };
 		A80B5F6D291110A60099A57C /* ReviewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewItem.swift; sourceTree = "<group>"; };
 		A8EE7096290E4CDA0095C41F /* EventPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPage.swift; sourceTree = "<group>"; };
+		FCAE4ED82912BCB10060F4FE /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,9 +93,9 @@
 				A4BFDEB2290D90FD00446DE5 /* HostingTabBar.swift */,
 				A4BFDEB0290D8B0700446DE5 /* Profile.swift */,
 				A8EE7096290E4CDA0095C41F /* EventPage.swift */,
-				3A9E5F07290E60B9003A6679 /* LogInPage.swift */,
 				A80B5F6D291110A60099A57C /* ReviewItem.swift */,
 				A80B5F6B29110D750099A57C /* ReviewsPage.swift */,
+				FCAE4ED82912BCB10060F4FE /* RatingView.swift */,
 				3A9E5F0F291104EF003A6679 /* appleLog.swift */,
 				3A9E5F1729123EEE003A6679 /* appleVerify.swift */,
 				3A9E5F11291109F7003A6679 /* login.swift */,
@@ -186,13 +188,13 @@
 				3A9E5F1629111323003A6679 /* Verification.swift in Sources */,
 				3A9E5F0C2910ED57003A6679 /* CreateAcountPage.swift in Sources */,
 				A4D8B1092909560200E137E7 /* Splash.swift in Sources */,
+				FCAE4ED92912BCB10060F4FE /* RatingView.swift in Sources */,
 				A8EE7097290E4CDA0095C41F /* EventPage.swift in Sources */,
 				A80B5F6C29110D750099A57C /* ReviewsPage.swift in Sources */,
 				A4BFDEB1290D8B0700446DE5 /* Profile.swift in Sources */,
 				A4BFDEB5290E74EB00446DE5 /* CampsPage.swift in Sources */,
 				A4D8B0FB2909554900E137E7 /* RankitApp.swift in Sources */,
 				A4BFDEBB2910504900446DE5 /* EventsPage.swift in Sources */,
-				3A9E5F08290E60B9003A6679 /* LogInPage.swift in Sources */,
 				A4D8B10D2909AF8D00E137E7 /* InterestPage.swift in Sources */,
 				3A9E5F12291109F7003A6679 /* login.swift in Sources */,
 				3A9E5F1829123EEE003A6679 /* appleVerify.swift in Sources */,

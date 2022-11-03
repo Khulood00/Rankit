@@ -10,7 +10,7 @@ struct InterestPage : View {
     
     let words = ["Tech Camp", "Events", "Art", "Sport", "Beauty", "Music", "Game", "Business", "Cultural", "Fashion"]
     
-   
+    let LableImages = ["Tech Camp", "Events", "Art", "Sport", "Beauty", "Music", "Game", "Business", "Cultural", "Fashion"]
 
     var body: some View {
         TagsView(items: words)
@@ -93,9 +93,12 @@ struct TagsView: View {
                                         Text(word)
                                             .fixedSize()
                                             .padding()
-                                            .background(Color.blue)
                                             .foregroundColor(.white)
+                                            .background(Image("Group")
+                                            .resizable()
+                                                    )
                                             .clipShape(RoundedRectangle(cornerRadius: 10.0, style: .continuous))
+                                        
                                     }
                                 }
                         }
