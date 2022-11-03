@@ -61,7 +61,7 @@ struct EventPage: View {
                             
                             
                             VStack{
-                                Image("stars")
+                                Image("5")
                                     .resizable()
                                     .frame(width: 110, height: 30)
                                     .clipShape(Rectangle())
@@ -85,13 +85,10 @@ struct EventPage: View {
                         
                         Image("map" )
                             .resizable()
-                            .padding(.horizontal)
-                            .frame(height: 150.0)
-                            .frame(maxWidth: .infinity)
-                            .background(Color(red: 0.929, green: 0.933, blue: 0.929))
-                            .cornerRadius(10)
-                            .padding()
                             .scaledToFit()
+                            .padding()
+                            
+                         
                     }
                     
                     // The buttons
@@ -108,7 +105,7 @@ struct EventPage: View {
                                         Text("Reviews")
                                     }
 
-                                    NavigationLink(destination:ReviewsPage(), isActive: $isPresent){}
+                                    NavigationLink(destination:appleLog(), isActive: $isPresent){}
                                 } .frame(width: 110, height: 67)
                                     .foregroundColor(.white)
                                     .background(Color(red: 0.367, green: 0.49, blue: 0.598))
@@ -190,6 +187,10 @@ struct EventPage: View {
                         }
                     }
                     
+                    
+                    
+                    
+                    
                     Group{
                         
                         ReviewItem(review: .init(name: "Malak", ratting: 5, comment: "Highly Recommended", time: .now))
@@ -208,6 +209,11 @@ struct EventPage: View {
                         
                         
                     }
+                    
+                    
+                    
+                    
+                    
                     
                     
                 }

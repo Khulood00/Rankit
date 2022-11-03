@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct Reviews {
+    
     var id = UUID()
     var name : String
     var ratting: Int
     var comment: String
     var time: Date
 }
+
+
 struct ReviewItem: View {
     
     @State var review : Reviews
@@ -24,6 +27,7 @@ struct ReviewItem: View {
         HStack {
             VStack {
                 Text(review.name)
+                    .fontWeight(.bold)
                 Image("\(review.ratting)")
                 .resizable()
                 .frame(width: 103.0, height: 25.0)
@@ -31,6 +35,7 @@ struct ReviewItem: View {
                 .scaledToFit()
 
                 Text(review.comment)
+                    .multilineTextAlignment(.center)
             }
             Spacer()
             Image(systemName: "clock")
