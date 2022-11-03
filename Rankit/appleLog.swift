@@ -16,7 +16,7 @@ struct appleLog: View {
             
             VStack(){
                 
-                NavigationLink("Cancel", destination: HomePage())
+                NavigationLink("Cancel", destination: EventPage().navigationBarBackButtonHidden(true))
                     .foregroundColor(Color(red: 94/255, green: 126/255, blue: 152/255))
                     .padding(.leading, 270)
                     .padding(.bottom,170)

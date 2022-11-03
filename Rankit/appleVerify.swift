@@ -21,7 +21,7 @@ struct appleVerify: View {
                     .foregroundColor(Color(red: 237/255, green: 237/255, blue:237/255))
                     .frame(maxWidth: .infinity , maxHeight: .infinity)
                     .cornerRadius(27)
-                    .padding(.top, 380)
+                    .padding(.top, 400)
                     .shadow(radius: 15)
                     .ignoresSafeArea()
                 
@@ -79,7 +79,8 @@ struct appleVerify: View {
                         .font(.system(size: 18, weight: .bold))
                         .foregroundColor(Color.black)
                 }
-                .padding(.bottom, 200)
+                .padding(.bottom, 300)
+                .padding()
             }
             
             .navigationTitle("Apple Verification")
