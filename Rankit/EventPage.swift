@@ -204,10 +204,12 @@ struct EventPage: View {
                             .frame(height: 1.0, alignment: .bottom)
                         ReviewItem(review: .init(name: "Dana", ratting: 5, comment: "Good environment to learn", time: .now))
                         
+                      
+                        
                         
                     }
                     
-         
+                  
                     
                 }
             }
