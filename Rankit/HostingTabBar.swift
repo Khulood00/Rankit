@@ -29,7 +29,7 @@ struct HostingTabBar: View {
                     Image(systemName: "house.fill")
                 }
                 .toolbar(.visible, for: .tabBar)
-                .toolbarBackground(Color(red: 94/255, green: 126/255, blue: 152/255), for:.tabBar)
+                .toolbarBackground(Color(red: 94/255, green: 126/255, blue: 152/255), for: .tabBar)
             
             WishList()
                 .tag(1)
@@ -59,5 +59,6 @@ struct HostingTabBar: View {
 struct HostingTabBar_Previews: PreviewProvider {
     static var previews: some View {
         HostingTabBar()
+        
     }
 }

@@ -68,7 +68,7 @@ struct CreateAcountPage: View {
                 
                 VStack {
                     Text("Create Account")
-                        .font(.system(size: 37, weight: .bold))
+                        .font(.system(size: 37, weight: .heavy))
                         .foregroundColor(Color(red: 94/255, green: 126/255, blue: 152/255))
                 }.padding(.trailing,80)
                     .padding(.bottom, 250)

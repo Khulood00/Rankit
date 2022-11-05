@@ -8,7 +8,6 @@
 import SwiftUI
 import UIKit
 import Foundation
-//import InstantSearch
 
 
 struct CampsItems: Identifiable {
@@ -81,7 +80,7 @@ struct CampsPage: View {
                     ScrollView(.horizontal){
                         HStack(spacing:20){
                             
-                            NavigationLink(destination:EventPage()){
+                            NavigationLink(destination:EventPage().navigationBarBackButtonHidden(true)){
                                 Image("img1")
                                     .resizable()
                                     .scaledToFit()
@@ -99,7 +98,10 @@ struct CampsPage: View {
                                 .shadow(radius: 5)
                              .frame(width:345, height: 200)
                                 }
-                    }
+                    }.navigationTitle("Camps")
+                        // .navigationBarTitleDisplayMode(.inline)
+                     
+
                     .padding()
             VStack {
                 
@@ -116,8 +118,10 @@ struct CampsPage: View {
                     CampsView(modelData: index)
                 }
             }
-        }.navigationTitle("Camps")
+                 }
+            
         }
+        
         .searchable(text: $searchText , placement: .navigationBarDrawer(displayMode: .always))
         
             .onChange(of: searchText) { index in
@@ -135,6 +139,7 @@ struct CampsPage: View {
 struct CampsPage_Previews: PreviewProvider {
     static var previews: some View {
         CampsPage()
+
     }
 }
 

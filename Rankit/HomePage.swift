@@ -47,7 +47,7 @@ struct HomePage: View {
                     
                     ScrollView(.horizontal) {
                         HStack {
-                            NavigationLink(destination: CampsPage().navigationBarBackButtonHidden(true)){
+                            NavigationLink(destination: CampsPage().navigationBarBackButtonHidden(false)){
 
                                 ZStack{
                                     Text("Camps")
@@ -60,7 +60,7 @@ struct HomePage: View {
                                 }
 
                                 ZStack{
-                                    NavigationLink(destination:EventsPage()){
+                                    NavigationLink(destination:EventsPage().navigationBarBackButtonHidden(false)){
                                         Text("Events")
                                             .fontWeight(.bold)
                                             .foregroundColor(.white)
@@ -71,17 +71,17 @@ struct HomePage: View {
                                     }
                                 }
                                 ZStack{
-                                    NavigationLink(destination:EventsPage()){
+                                   
                                         Text("Sport")
                                             .fontWeight(.bold)
                                             .foregroundColor(.white)
                                             .frame(width: 116,height: 197)
                                             .background(
                                                 RoundedRectangle(cornerRadius: 15, style: .continuous).fill(backgroundGradient))
-                                    }
+                                 
                                 }
                                 ZStack{
-                                    NavigationLink(destination:EventsPage()){
+                               
                                         Text("Art")
                                             .fontWeight(.bold)
                                             .foregroundColor(.white)
@@ -89,7 +89,7 @@ struct HomePage: View {
                                             .background(
                                                 RoundedRectangle(cornerRadius: 15, style: .continuous).fill(backgroundGradient)
                                             )
-                                    }
+                                  
                                 }
                                     
                             }
@@ -98,13 +98,13 @@ struct HomePage: View {
                     .padding()
                 }
                 
-                
                 .searchable(text: $searchQuery)
                 .navigationTitle("Home")
               //  .navigationBarTitleDisplayMode(.inline)
             }
        }
     }
+    
     struct BoxView: View{
         var body : some View{
             
@@ -131,6 +131,7 @@ struct HomePage: View {
     struct HomePage_Previews: PreviewProvider {
         static var previews: some View {
             HomePage()
+            
         }
     }
 }
