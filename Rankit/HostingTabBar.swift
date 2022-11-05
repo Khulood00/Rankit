@@ -35,7 +35,7 @@ struct HostingTabBar: View {
                 .tag(1)
                 .tabItem {
                     Text("Wish List")
-                    Image(systemName: "magnifyingglass")
+                    Image(systemName: "heart.circle")
                 }
                   .toolbar(.visible, for: .tabBar)
                   .toolbarBackground(Color(red: 94/255, green: 126/255, blue: 152/255), for:.tabBar)

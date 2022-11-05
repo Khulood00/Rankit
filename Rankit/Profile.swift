@@ -82,7 +82,7 @@ struct Profile: View {
                             .cornerRadius(8)
                             .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                         
-                    } .padding(.bottom, 160)
+                    } .padding(.bottom, 120.0)
                         
                     }
                     .padding(.top)

@@ -102,9 +102,11 @@ struct EventsPage: View {
                             Text(items.city)
                                 .font(Font.custom("SF Comact", size: 10))
                         }
-                        Text(" ⭐️⭐️⭐️")
+                        Image("5")
+                            .resizable()
+                            .frame(width: 103.0, height: 31.0)
+                            .scaledToFit()
                             .padding(.leading, 20.0)
-
                             .font(Font.custom("SF Comact", size: 10))
                     }
 
