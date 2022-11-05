@@ -7,64 +7,8 @@
 
 import SwiftUI
 struct InterestPage : View {
-    
-    let words = ["Tech Camp", "Events", "Art", "Sport", "Beauty", "Music", "Game", "Business", "Cultural", "Fashion"]
-    
-    let LableImages = ["Tech Camp", "Events", "Art", "Sport", "Beauty", "Music", "Game", "Business", "Cultural", "Fashion"]
-
-    var body: some View {
-        TagsView(items: words)
-    }
-}
-
-struct InterestPage_Previews: PreviewProvider {
-    static var previews: some View {
-        InterestPage()
-    }
-}
-struct TagsView: View {
     @State var isPresenting = false
-    
-    let items: [String]
-    var groupedItems: [[String]] = [[String]]()
-    let screenWidth = UIScreen.main.bounds.width
-    
-    init(items: [String]) {
-        self.items = items
-        self.groupedItems = createGroupedItems(items)
-    }
-    
-    private func createGroupedItems(_ items: [String]) -> [[String]] {
-        
-        var groupedItems: [[String]] = [[String]]()
-        var tempItems: [String] =  [String]()
-        var width: CGFloat = 0
-        
-        for word in items {
-            
-            let label = UILabel()
-            label.text = word
-            label.sizeToFit()
-            
-            let labelWidth = label.frame.size.width + 32
-            
-            if (width + labelWidth + 55) < screenWidth {
-                width += labelWidth
-                tempItems.append(word)
-            } else {
-                width = labelWidth
-                groupedItems.append(tempItems)
-                tempItems.removeAll()
-                tempItems.append(word)
-            }
-            
-        }
-        
-        groupedItems.append(tempItems)
-        return groupedItems
-        
-    }
-    
+
     var body: some View {
         NavigationView{
             ZStack{
@@ -84,42 +28,194 @@ struct TagsView: View {
                     Text("Select Your Interest")
                         .fontWeight(.medium)
                         .multilineTextAlignment(.center)
+                        .padding(.bottom, 600)
                         .font(.title)
-                        .padding(.bottom, 70)
-                    
-                    
-                    ScrollView {
-                            
-                            ForEach(groupedItems, id: \.self) { subItems in
-                                HStack {
-                                    ForEach(subItems, id: \.self) { word in
-                                        Text(word)
-                                            .fixedSize()
-                                            .padding()
-                                            .foregroundColor(.white)
-                                            .background(Image("Group")
-                                            .resizable()
-                                                    )
-                                            .clipShape(RoundedRectangle(cornerRadius: 10.0, style: .continuous))
-                                        
-                                    }
-                                }
+                }
+                VStack{
+                    HStack{
+                        ZStack{
+                            Button{}
+                        label:{
+    //                        Text("Reviews")
+    //                            .fontWeight(.bold)
+                        }.frame(width: 150, height: 45)
+                                .foregroundColor(.white)
+                                .background(Image("Image1").resizable().scaledToFill().opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/))
+                                .cornerRadius(8)
+                            Text("Technology")
+                                .font(.system(size: 22))
+                                .fontWeight(.bold)
+                                .foregroundColor(Color.white)
+                                
+
+                        }
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        ZStack{
+                            Button{}
+                        label:{
+    //                        Text("Reviews")
+    //                            .fontWeight(.bold)
+                        }.frame(width: 186, height: 45)
+                                .foregroundColor(.white)
+                                .background(Image("Image2").resizable().scaledToFill().opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/))
+                                .cornerRadius(8)
+                            Text("Workshop")
+                                .font(.system(size: 22))
+                                .fontWeight(.bold)
+                                .foregroundColor(Color.white)
+
                         }
                     }
-                    VStack{
-                        Button("LET'S GO!") {
-                                            isPresenting = true
-                                        }.frame(width: 300)
-                            .font(.title)
-                            .fontWeight(.medium)
-                            .padding(7)
-                            .foregroundColor(.white)
-                            .background(Color(red: 94/255, green: 126/255, blue: 152/255))
-                            .cornerRadius(14)
-                                        NavigationLink(destination: HostingTabBar().navigationBarBackButtonHidden(true), isActive: $isPresenting) { }
-                            
-                                    
-                    } .padding(.bottom, 200.0)
+                    .padding(5)
+                    HStack{
+                        ZStack{
+                            Button{}
+                        label:{
+    //                        Text("Reviews")
+    //                            .fontWeight(.bold)
+                        }.frame(width: 145, height: 45)
+                                .foregroundColor(.white)
+                                .background(Image("Image3").resizable().scaledToFill().opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/))
+                                .cornerRadius(8)
+                            Text("Art")
+                                .font(.system(size: 22))
+                                .fontWeight(.bold)
+                                .foregroundColor(Color.white)
+
+                        }
+                        ZStack{
+                            Button{}
+                        label:{
+    //                        Text("Reviews")
+    //                            .fontWeight(.bold)
+                        }.frame(width: 98, height: 45)
+                                .foregroundColor(.white)
+                                .background(Image("Image4").resizable().scaledToFill().opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/))
+                                .cornerRadius(8)
+                            Text("Sport")
+                                .font(.system(size: 22))
+                                .fontWeight(.bold)
+                                .foregroundColor(Color.white)
+
+                        }
+                        ZStack{
+                            Button{}
+                        label:{
+    //                        Text("Reviews")
+    //                            .fontWeight(.bold)
+                        }.frame(width: 90, height: 45)
+                                .foregroundColor(.white)
+                                .background(Image("Image5").resizable().scaledToFill().opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/))
+                                .cornerRadius(8)
+                            Text("Beauty")
+                                .font(.system(size: 22))
+                                .fontWeight(.bold)
+                                .foregroundColor(Color.white)
+
+                        }
+                    }
+                    .padding(5)
+                    HStack{
+                        ZStack{
+                            Button{}
+                        label:{
+    //                        Text("Reviews")
+    //                            .fontWeight(.bold)
+                        }.frame(width: 101, height: 45)
+                                .foregroundColor(.white)
+                                .background(Image("Image6").resizable().scaledToFill().opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/))
+                                .cornerRadius(8)
+                            Text("Music")
+                                .font(.system(size: 22))
+                                .fontWeight(.bold)
+                                .foregroundColor(Color.white)
+
+                        }
+                        ZStack{
+                            Button{}
+                        label:{
+    //                        Text("Reviews")
+    //                            .fontWeight(.bold)
+                        }.frame(width: 99, height: 45)
+                                .foregroundColor(.white)
+                                .background(Image("Image7")
+                                    .resizable().scaledToFill().opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/))
+                                .cornerRadius(8)
+                            Text("Game")
+                                .font(.system(size: 22))
+                                .fontWeight(.bold)
+                                .foregroundColor(Color.white)
+
+                        }
+                        ZStack{
+                            Button{}
+                        label:{
+    //                        Text("Reviews")
+    //                            .fontWeight(.bold)
+                        }.frame(width: 115, height: 45)
+                                .foregroundColor(.white)
+                                .background(Image("Image8").resizable().scaledToFill().opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/))
+                                .cornerRadius(8)
+                            Text("Business")
+                                .font(.system(size: 22))
+                                .fontWeight(.bold)
+                                .foregroundColor(Color.white)
+
+                        }
+                    }
+                    .padding(5)
+                    HStack{
+                        ZStack{
+                            Button{}
+                        label:{
+    //                        Text("Reviews")
+    //                            .fontWeight(.bold)
+                        }.frame(width: 150, height: 45)
+                                .foregroundColor(.white)
+                                .background(Image("Image9").resizable().scaledToFill().opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/))
+                                .cornerRadius(8)
+                            Text("Cultural")
+                                .font(.system(size: 22))
+                                .fontWeight(.bold)
+                                .foregroundColor(Color.white)
+
+                        }
+                        ZStack{
+                            Button{}
+                        label:{
+    //                        Text("Reviews")
+    //                            .fontWeight(.bold)
+                        }.frame(width: 180, height: 45)
+                                .foregroundColor(.white)
+                                .background(Image("Image10").resizable().scaledToFill().opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/))
+                                .cornerRadius(8)
+                            Text("Fashion")
+                                .font(.system(size: 22))
+                                .fontWeight(.bold)
+                                .foregroundColor(Color.white)
+
+                        }
+                    }
+                    .padding(5)
+                    .padding(.bottom, 30.0)
+                    Button("LET'S GO!") {
+                                        isPresenting = true
+                                    }.frame(width: 300)
+                        .font(.title)
+                        .fontWeight(.medium)
+                        .padding(7)
+                        .foregroundColor(.white)
+                        .background(Color(red: 94/255, green: 126/255, blue: 152/255))
+                        .cornerRadius(14)
+                                    NavigationLink(destination: HostingTabBar().navigationBarBackButtonHidden(true), isActive: $isPresenting) { }
+                }
+                .padding(.top, -10.0)
                            
                         }
                         
@@ -128,6 +224,13 @@ struct TagsView: View {
                 }
                 
             }
-        }
+
+struct InterestPage_Previews: PreviewProvider {
+    static var previews: some View {
+        InterestPage()
+    }
+}
+
+
         
     
