@@ -72,7 +72,7 @@ struct TagsView: View {
                     HStack{
                         Spacer()
                             .padding(30)
-                        NavigationLink {HomePage().navigationBarBackButtonHidden(true)}
+                        NavigationLink {HostingTabBar().navigationBarBackButtonHidden(true)}
                     label: {
                         Text("Skip")
                             .fontWeight(.medium)
@@ -116,7 +116,7 @@ struct TagsView: View {
                             .foregroundColor(.white)
                             .background(Color(red: 94/255, green: 126/255, blue: 152/255))
                             .cornerRadius(14)
-                                        NavigationLink(destination: HomePage().navigationBarBackButtonHidden(true), isActive: $isPresenting) { }
+                                        NavigationLink(destination: HostingTabBar().navigationBarBackButtonHidden(true), isActive: $isPresenting) { }
                             
                                     
                     } .padding(.bottom, 200.0)

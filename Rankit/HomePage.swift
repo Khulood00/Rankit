@@ -53,7 +53,7 @@ struct HomePage: View {
                                     Text("Camps")
                                         .fontWeight(.bold)
                                         .foregroundColor(.white)
-                                        .frame(width: 116,height: 197)
+                                        .frame(width: 116,height: 155)
                                         .background(
                                             RoundedRectangle(cornerRadius: 15, style: .continuous).fill(backgroundGradient)
                                         )
@@ -64,7 +64,7 @@ struct HomePage: View {
                                         Text("Events")
                                             .fontWeight(.bold)
                                             .foregroundColor(.white)
-                                            .frame(width: 116,height: 197)
+                                            .frame(width: 116,height: 155)
                                             .background(
                                                 RoundedRectangle(cornerRadius: 15, style: .continuous).fill(backgroundGradient)
                                             )
@@ -75,7 +75,7 @@ struct HomePage: View {
                                         Text("Sport")
                                             .fontWeight(.bold)
                                             .foregroundColor(.white)
-                                            .frame(width: 116,height: 197)
+                                            .frame(width: 116,height: 155)
                                             .background(
                                                 RoundedRectangle(cornerRadius: 15, style: .continuous).fill(backgroundGradient))
                                     }
@@ -85,7 +85,7 @@ struct HomePage: View {
                                         Text("Art")
                                             .fontWeight(.bold)
                                             .foregroundColor(.white)
-                                            .frame(width: 116,height: 197)
+                                            .frame(width: 116,height: 155)
                                             .background(
                                                 RoundedRectangle(cornerRadius: 15, style: .continuous).fill(backgroundGradient)
                                             )
