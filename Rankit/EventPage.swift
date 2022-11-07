@@ -166,7 +166,6 @@ struct EventPage: View {
                                 
                                 
                                 
-                                
                                 VStack{
                                     Image("5")
                                         .resizable()

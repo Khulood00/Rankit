@@ -64,7 +64,6 @@ struct CampsView: View {
                     .font(Font.custom("SF Comact", size: 10))
 
             }
-
             }
     }
     
@@ -79,11 +78,11 @@ struct CampsPage: View {
 
         NavigationView{
                  VStack{
-                     
+                     //Scroll View On the top of page
                     ScrollView(.horizontal){
                         HStack(spacing:20){
                             
-                            NavigationLink(destination:EventPage().navigationBarBackButtonHidden(true)){
+                            NavigationLink(destination:EventPage().navigationBarBackButtonHidden(false)){
                                 Image("img1")
                                     .resizable()
                                     .scaledToFit()
@@ -102,7 +101,6 @@ struct CampsPage: View {
                              .frame(width:345, height: 200)
                                 }
                     }.navigationTitle("Camps")
-                        // .navigationBarTitleDisplayMode(.inline)
                      
 
                     .padding()
@@ -116,17 +114,15 @@ struct CampsPage: View {
                     .padding(.trailing, 125.0)
                     .bold()
                 Divider()
+                //List Contain Most pupular Camps
                 List(searchCollection) { index in
-                    
                     CampsView(modelData: index)
                 }
             }
                  }
-            
         }
-        
+        //Activate Searchable
         .searchable(text: $searchText , placement: .navigationBarDrawer(displayMode: .always))
-        
             .onChange(of: searchText) { index in
                 if !index.isEmpty {
                     searchCollection = modelData.filter { $0.title.contains(index) }
@@ -134,10 +130,7 @@ struct CampsPage: View {
                     searchCollection = modelData
                 }
             }
-        
     }
-    
-    
 }
 struct CampsPage_Previews: PreviewProvider {
     static var previews: some View {

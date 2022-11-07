@@ -13,7 +13,6 @@ struct Box{
     var id:Int
     let imageURL: String
 }
-
 struct HomePage: View {
     
     let boxes:[Box] = [
@@ -99,8 +98,9 @@ struct HomePage: View {
                 }
                 
                 .searchable(text: $searchQuery)
-                .navigationTitle("Home")
-              //  .navigationBarTitleDisplayMode(.inline)
+                .navigationTitle("Today Events")
+            
+        
             }
        }
     }
