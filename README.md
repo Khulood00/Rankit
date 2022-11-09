@@ -47,7 +47,15 @@ order to decide whether this event is valuable or a waste of time.
 PowerPuff
 Khulood Alhamed - Wala Almuheef - Wedad Almehmadi - Shahad Buhmail - Rand AlMuhanna
 
+## Team
+<center>
 
+| :---: | :---: | :---: |
+|**Name** | Khulood Alhamed | Wala Almuheef | Wedad Almehmadi | Shahad Buhmail | Rand AlMuhanna |
+|**GitHub**|||<a href="">Ninja-jumipy2011</a>|||
+|**Links**|||<a href="https://www.linkedin.com/in/wedad-almehmadi-701476200/">Wedad Almehmadi</a>|||
+
+</center>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
