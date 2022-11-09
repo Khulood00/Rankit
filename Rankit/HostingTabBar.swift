@@ -10,6 +10,12 @@ import UIKit
 
 struct HostingTabBar: View {
     
+    
+    init() {
+      UITabBar.appearance().backgroundColor = UIColor(Color("Theme1"))
+        
+    }
+    
     private enum Tab: Hashable {
             case home
             case wish
@@ -17,45 +23,40 @@ struct HostingTabBar: View {
         }
     
     @State private var selectedTab: Tab = .home
-    
-    static let defaultBackground = UIColor(red:94, green:126, blue:152, alpha:1.00)
-
-    var body: some View {
-        
-        
-        TabView(selection: $selectedTab) {
-            
-            HomePage()
-                .tag(0)
-                .tabItem {
-                    Text("Home")
-                    Image(systemName: "house.fill")
-                }
-              
-            WishList()
-                .tag(1)
-                .tabItem {
-                    Text("Wish List")
-                    Image(systemName: "heart.circle")
-                }
-                
-            Profile()
-                .tag(2)
-                .tabItem {
-                    Text("Profile")
-                    Image(systemName: "person.crop.circle")
-                }
-            
-            
-        }
-
-        .toolbar(.visible, for: .tabBar)
-           .toolbarBackground(Color(red: 94/255, green: 126/255, blue: 152/255), for: .tabBar)
-        
-        .accentColor(.white)
-
-    }
    
+    
+    
+    var body: some View {
+        NavigationView{
+            TabView(selection: $selectedTab) {
+           
+                HomePage()
+                    .tag(0)
+                    .tabItem {
+                        Text("Home")
+                        Image(systemName: "house.fill")
+                        
+                    }
+                
+                WishList()
+                    .tag(1)
+                    .tabItem {
+                        Text("Wish List")
+                        Image(systemName: "heart.circle")
+                    }
+                
+                
+                Profile()
+                    .tag(2)
+                    .tabItem {
+                        Text("Profile")
+                        Image(systemName: "person.crop.circle")
+                    }
+                    
+            }
+           .tint(.white)
+        }
+    }
 }
 
 struct HostingTabBar_Previews: PreviewProvider {
