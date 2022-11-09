@@ -1,12 +1,8 @@
 <!-- PROJECT LOGO -->
-<br />
-<div align="center">
-    <img src="Bitmap.png" alt="Logo" width="80" height="80">
-  </a>
+<div>
+<h3><img align="left" width="100" height="100" src="Bitmap.png"> <br/> RankIt <br/> <br/> <br/> </h3>   
+ </div>   
 
-<h3 align="center">RankIt</h3>
-
-</div>
 
 # Overveiw
 Rank it is useful tool to gather most benificial events and provides users’ experince throgh the events rating and reviews 
