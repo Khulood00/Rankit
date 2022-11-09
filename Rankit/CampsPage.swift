@@ -72,6 +72,7 @@ struct CampsView: View {
 struct CampsPage: View {
     
     @State var searchCollection = modelData
+    //init search
     @State var searchText = ""
     
     var body: some View {

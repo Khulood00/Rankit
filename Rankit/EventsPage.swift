@@ -115,12 +115,9 @@ struct EventsPage: View {
         }
                  .searchable(text: $searchQuery)
                 .navigationTitle("Events")
-            
     }
 
-        
     }
-    
 }
 struct EventsPage_Previews: PreviewProvider {
     static var previews: some View {
