@@ -10,8 +10,6 @@ import SwiftUI
 struct ReviewsPage: View {
     
 
-    
-    
     @State private var rating: Int?
 
     

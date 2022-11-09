@@ -24,8 +24,6 @@ struct HostingTabBar: View {
     
     @State private var selectedTab: Tab = .home
    
-    
-    
     var body: some View {
         NavigationView{
             TabView(selection: $selectedTab) {
