@@ -1,24 +1,11 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">RankIt</h3>
 
-  <p align="center">
-    project_description
-    <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
-  </p>
 </div>
 
 # Overveiw
@@ -44,18 +31,9 @@ order to decide whether this event is valuable or a waste of time.
 # Tools
 [![SwiftUI][SwiftUI-img]][SwiftUI-url]   [![Sketch][Sketch-img]][Sketch-url]
 
-PowerPuff
-Khulood Alhamed - Wala Almuheef - Wedad Almehmadi - Shahad Buhmail - Rand AlMuhanna
-
-## Team
-<center>
-
-| :---: | :---: | :---: |
-|**Name** | Khulood Alhamed | Wala Almuheef | Wedad Almehmadi | Shahad Buhmail | Rand AlMuhanna |
-|**GitHub**|||<a href="">Ninja-jumipy2011</a>|||
-|**Links**|||<a href="https://www.linkedin.com/in/wedad-almehmadi-701476200/">Wedad Almehmadi</a>|||
-
-</center>
+# Team
+#### PowerPuff
+Khulood Alhamed - Wala Almuheef - <a href="https://www.linkedin.com/in/wedad-almehmadi-701476200/">Wedad Almehmadi</a> - Shahad Buhmail - Rand AlMuhanna
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
