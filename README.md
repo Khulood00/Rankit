@@ -41,7 +41,17 @@ order to decide whether this event is valuable or a waste of time.
 - Project is completed on time
 - Project meet the functionals requirements
 - Project team satisfaction target is achieved
-
+# Tools
+[![SwiftUI][SwiftUI-img]][SwiftUI-url]   [![Sketch][Sketch-img]][Sketch-url]
 
 PowerPuff
 Khulood Alhamed - Wala Almuheef - Wedad Almehmadi - Shahad Buhmail - Rand AlMuhanna
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[SwiftUI-img]: https://img.shields.io/badge/-SwiftUI-blue
+[SwiftUI-url]: https://developer.apple.com/xcode/swiftui/
+[Sketch-img]: https://img.shields.io/badge/-Sketch-yellow
+[Sketch-url]: https://www.sketch.com
