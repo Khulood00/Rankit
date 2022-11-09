@@ -11,8 +11,7 @@ import SwiftUI
 struct RankitApp: App {
     var body: some Scene {
         WindowGroup {
-            
-            Splash()
+        Splash()
         }
     }
 }

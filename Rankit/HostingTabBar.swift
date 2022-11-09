@@ -17,8 +17,11 @@ struct HostingTabBar: View {
         }
     
     @State private var selectedTab: Tab = .home
+    
+    static let defaultBackground = UIColor(red:94, green:126, blue:152, alpha:1.00)
 
     var body: some View {
+        
         
         TabView(selection: $selectedTab) {
             
@@ -28,17 +31,14 @@ struct HostingTabBar: View {
                     Text("Home")
                     Image(systemName: "house.fill")
                 }
-                .toolbar(.visible, for: .tabBar)
-                .toolbarBackground(Color(red: 94/255, green: 126/255, blue: 152/255), for: .tabBar)
-            
+              
             WishList()
                 .tag(1)
                 .tabItem {
                     Text("Wish List")
                     Image(systemName: "heart.circle")
                 }
-                  .toolbar(.visible, for: .tabBar)
-                  .toolbarBackground(Color(red: 94/255, green: 126/255, blue: 152/255), for:.tabBar)
+                
             Profile()
                 .tag(2)
                 .tabItem {
@@ -46,10 +46,12 @@ struct HostingTabBar: View {
                     Image(systemName: "person.crop.circle")
                 }
             
-                .toolbar(.visible, for: .tabBar)
-                .toolbarBackground(Color(red: 94/255, green: 126/255, blue: 152/255), for:.tabBar)
             
         }
+
+        .toolbar(.visible, for: .tabBar)
+           .toolbarBackground(Color(red: 94/255, green: 126/255, blue: 152/255), for: .tabBar)
+        
         .accentColor(.white)
 
     }
