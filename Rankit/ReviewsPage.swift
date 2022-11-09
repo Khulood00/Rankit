@@ -25,6 +25,7 @@ struct ReviewsPage: View {
                     Image("AppleAcademy")
                         .resizable()
                         .scaledToFit()
+                        .cornerRadius(15)
                         .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                 }
             }
