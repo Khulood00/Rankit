@@ -18,99 +18,108 @@ struct ReviewsPage: View {
     @State private var ReviewText: String = ""
     @State var showImagePicker: Bool = false
        @State var image: Image? = nil
+    @State var isPresent = false
 
 
     var body: some View {
-        ZStack{
-            VStack{
-                GeometryReader { geometry in
+        NavigationView{
+            ZStack{
+                VStack{
                     Image("AppleAcademy")
                         .resizable()
                         .scaledToFit()
                         .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                 }
-            }
-            
-            VStack{
-                Text("Share Your Feedback")
-                    .frame(maxWidth: .infinity, alignment: .topLeading)
-                    .font(.title2)
-                    .fontWeight(.bold)
-                    .padding(.bottom, 200.0)
-                    .padding(.leading)
-                    .foregroundColor(Color(red: 94/255, green: 126/255, blue: 152/255))
-            }
-            VStack{
-                Text("Rait the event")
-                    .frame(maxWidth: .infinity, alignment: .topLeading)
-                    .padding(.bottom, 140.0)
-                    .padding(.leading)
-                    .foregroundColor(Color(red: 82/255, green: 78/255, blue: 80/255))
-            }
-            
-            VStack {
-                      RatingView(rating: $rating, max: 5)
-                     //  Text(rating != nil ? "You rating: \(rating!)" : "")
-            }
-            .padding(.bottom, 50.0)
-            
-            VStack{
+                .padding(.bottom, 500)
                 
-                TextField("Type your review...", text: $ReviewText,axis: .vertical)
-                    .foregroundColor(Color(red: 82/255, green: 78/255, blue: 80/255))
-                    .lineLimit(7, reservesSpace: true)
-                
-                    .padding()
-                    .overlay(RoundedRectangle(cornerRadius: 7.0).strokeBorder(Color.gray, style: StrokeStyle(lineWidth: 1.0)))
-                    .padding()
-            }.padding(.top, 200.0).frame(width: 340)
-            
-            VStack{
-                Button(action: {
-                    self.showImagePicker.toggle()
-                }) {
-                    
-                    Image(systemName: "photo.on.rectangle")
+                VStack{
+                    Text("Share Your Feedback")
+                        .frame(maxWidth: .infinity, alignment: .topLeading)
+                        .font(.title2)
+                        .fontWeight(.bold)
+                        .padding(.bottom, 200.0)
+                        .padding(.leading)
                         .foregroundColor(Color(red: 94/255, green: 126/255, blue: 152/255))
-                    Text("Upload from camera roll")
+                }
+                VStack{
+                    Text("Rait the event")
+                        .frame(maxWidth: .infinity, alignment: .topLeading)
+                        .padding(.bottom, 140.0)
+                        .padding(.leading)
                         .foregroundColor(Color(red: 82/255, green: 78/255, blue: 80/255))
+                }
+                
+                VStack {
+                    RatingView(rating: $rating, max: 5)
+                    //  Text(rating != nil ? "You rating: \(rating!)" : "")
+                }
+                .padding(.bottom, 50.0)
+                
+                VStack{
+                    
+                    TextField("Type your review...", text: $ReviewText,axis: .vertical)
+                        .foregroundColor(Color(red: 82/255, green: 78/255, blue: 80/255))
+                        .lineLimit(7, reservesSpace: true)
+                    
+                        .padding()
+                        .overlay(RoundedRectangle(cornerRadius: 7.0).strokeBorder(Color.gray, style: StrokeStyle(lineWidth: 1.0)))
+                        .padding()
+                }.padding(.top, 200.0).frame(width: 340)
+                
+                VStack{
+                    Button(action: {
+                        self.showImagePicker.toggle()
+                    }) {
                         
+                        Image(systemName: "photo.on.rectangle")
+                            .foregroundColor(Color(red: 94/255, green: 126/255, blue: 152/255))
+                        Text("Upload from camera roll")
+                            .foregroundColor(Color(red: 82/255, green: 78/255, blue: 80/255))
+                        
+                    }
+                    .padding(10)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 7)
+                            .stroke(style: StrokeStyle(lineWidth: 1, dash: [6.0]))
+                            .frame(width: 305)
+                            .foregroundColor(Color(red: 196/255, green: 196/255, blue: 198/255))
+                    )
+                    
+                    image?.resizable().frame(width: 50, height: 50)
+                    
+                    
+                    
                 }
-                .padding(10)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 7)
-                        .stroke(style: StrokeStyle(lineWidth: 1, dash: [6.0]))
-                        .frame(width: 305)
-                        .foregroundColor(Color(red: 196/255, green: 196/255, blue: 198/255))
-                )
+                .padding(.top, 450.0)
                 
-                image?.resizable().frame(width: 50, height: 50)
-                
-                
-                
-            }
-            .padding(.top, 450.0)
-            
-            .sheet(isPresented: $showImagePicker) {
-                ImagePicker(sourceType: .photoLibrary) { image in
-                    self.image = Image(uiImage: image)
+                .sheet(isPresented: $showImagePicker) {
+                    ImagePicker(sourceType: .photoLibrary) { image in
+                        self.image = Image(uiImage: image)
+                    }
                 }
-            }
-            
-            VStack{
-                Button("Send") {}
-                    .padding(.vertical, -7.0)
-                    .frame(width: 280)
-                    .font(.system(size: 22))
-                    .padding()
-                    .foregroundColor(.white)
-                    .background(Color(red: 94/255, green: 126/255, blue: 152/255))
-                    .cornerRadius(10)
-                    .shadow(radius: 5)
+                
+                VStack{
+                    Button {print("test")
+                        isPresent=true
+                    }
+                label: {Text("Send")
+                    NavigationLink(destination:EventPage().navigationBarBackButtonHidden(true), isActive: $isPresent){}
+                }
+                .padding(.vertical, -7.0)
+                .frame(width: 280)
+                .font(.system(size: 22))
+                .padding()
+                .foregroundColor(.white)
+                .background(Color(red: 94/255, green: 126/255, blue: 152/255))
+                .cornerRadius(10)
+                .shadow(radius: 5)
+                    
+                    
+                    
+                }
+                .padding(.top, 600.0)
                 
             }
-            .padding(.top, 600.0)
-            
         }
     }
 }

@@ -105,7 +105,7 @@ struct EventPage: View {
                                         Text("Reviews")
                                     }
 
-                                    NavigationLink(destination:appleLog().navigationBarBackButtonHidden(true), isActive: $isPresent){}
+                                    NavigationLink(destination:ReviewsPage().navigationBarBackButtonHidden(true), isActive: $isPresent){}
                                 } .frame(width: 110, height: 67)
                                     .foregroundColor(.white)
                                     .background(Color(red: 0.367, green: 0.49, blue: 0.598))
@@ -119,7 +119,6 @@ struct EventPage: View {
                                     Image(systemName: "heart.fill")
                                     Text("Wish List")
                                 }
-                                NavigationLink(destination:WishList(), isActive: $isValid){}
                             }.frame(width: 110, height: 67)
                                 .foregroundColor(.white)
                                 .background(Color(red: 0.367, green: 0.49, blue: 0.598))
