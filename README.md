@@ -5,7 +5,7 @@
 
 
 # Overveiw
-Rank it is useful tool to gather most benificial events and provides users’ experince throgh the events rating and reviews 
+Rankit is a reference app that provides reviews of events that do not have a fixed location, and training camps. Which needs a rate to help users to know about events that suite them.
 ### Proposed Solution
 To build an app that allows users to interact with occurring events by providing personal 
 feedback which can be used as a reference for other users who wish to attend the same 
