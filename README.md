@@ -29,7 +29,7 @@ order to decide whether this event is valuable or a waste of time.
 
 # Team
 #### PowerPuff
-Khulood Alhamed - Wala Almuheef - <a href="https://www.linkedin.com/in/wedad-almehmadi-701476200/">Wedad Almehmadi</a> - Shahad Buhmail - Rand AlMuhanna
+<a href="https://www.linkedin.com/in/khulood-alhamed-73a837209/">Khulood Alhamed</a> - Wala Almuheef - <a href="https://www.linkedin.com/in/wedad-almehmadi-701476200/">Wedad Almehmadi</a> - Shahad Buhmail - Rand AlMuhanna
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
