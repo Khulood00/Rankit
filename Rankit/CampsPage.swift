@@ -8,7 +8,6 @@
 import SwiftUI
 import UIKit
 import Foundation
-//import InstantSearch
 
 
 struct CampsItems: Identifiable {
@@ -65,7 +64,6 @@ struct CampsView: View {
                     .font(Font.custom("SF Comact", size: 10))
 
             }
-
             }
     }
     
@@ -74,17 +72,18 @@ struct CampsView: View {
 struct CampsPage: View {
     
     @State var searchCollection = modelData
+    //init search
     @State var searchText = ""
     
     var body: some View {
 
         NavigationView{
                  VStack{
-                     
+                     //Scroll View On the top of page
                     ScrollView(.horizontal){
                         HStack(spacing:20){
                             
-                            NavigationLink(destination:EventPage()){
+                            NavigationLink(destination:EventPage().navigationBarBackButtonHidden(false)){
                                 Image("img1")
                                     .resizable()
                                     .scaledToFit()
@@ -102,7 +101,9 @@ struct CampsPage: View {
                                 .shadow(radius: 5)
                              .frame(width:345, height: 200)
                                 }
-                    }
+                    }.navigationTitle("Camps")
+                     
+
                     .padding()
             VStack {
                 
@@ -114,15 +115,15 @@ struct CampsPage: View {
                     .padding(.trailing, 125.0)
                     .bold()
                 Divider()
+                //List Contain Most pupular Camps
                 List(searchCollection) { index in
-                    
                     CampsView(modelData: index)
                 }
             }
-        }.navigationTitle("Camps")
+                 }
         }
+        //Activate Searchable
         .searchable(text: $searchText , placement: .navigationBarDrawer(displayMode: .always))
-        
             .onChange(of: searchText) { index in
                 if !index.isEmpty {
                     searchCollection = modelData.filter { $0.title.contains(index) }
@@ -130,14 +131,12 @@ struct CampsPage: View {
                     searchCollection = modelData
                 }
             }
-        
     }
-    
-    
 }
 struct CampsPage_Previews: PreviewProvider {
     static var previews: some View {
         CampsPage()
+
     }
 }
 

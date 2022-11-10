@@ -16,8 +16,6 @@ struct Profile: View {
     var body: some View {
         
         
-      
-
         VStack{
             Text("Profile")
                 .font(.largeTitle)
@@ -28,7 +26,7 @@ struct Profile: View {
                 
             VStack{
         
-                Image(systemName: "person.fill")
+                Image(systemName: "person.circle")
                     .resizable()
                     .scaledToFit()
 

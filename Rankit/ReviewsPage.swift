@@ -10,8 +10,6 @@ import SwiftUI
 struct ReviewsPage: View {
     
 
-    
-    
     @State private var rating: Int?
 
     
@@ -28,6 +26,7 @@ struct ReviewsPage: View {
                     Image("AppleAcademy")
                         .resizable()
                         .scaledToFit()
+                        .cornerRadius(15)
                         .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                 }
                 .padding(.bottom, 500)

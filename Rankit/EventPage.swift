@@ -20,7 +20,8 @@ struct EventPage: View {
                     Image("AppleAcademy")
                         .resizable()
                         .scaledToFit()
-                        .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                        .cornerRadius(15)
+                        .shadow(radius: 10)
                     
                     Text("Camps")
                         .foregroundColor(Color(red: 0.334, green: 0.462, blue: 0.567))
@@ -165,7 +166,6 @@ struct EventPage: View {
                                 
                                 
                                 
-                                
                                 VStack{
                                     Image("5")
                                         .resizable()
@@ -211,7 +211,7 @@ struct EventPage: View {
                   
                     
                 }
-            }
+            }.navigationBarTitle("Apple Academy") 
         }
     }
     
