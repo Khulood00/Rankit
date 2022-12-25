@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <div>
 <h3><img align="left" width="100" height="100" src="Bitmap.png"> <br/> RankIt <br/>
-<a href="https://drive.google.com/file/d/1voRDPYBD59nTCgkxK2VCdDymXtrjr1hE/view?usp=share_link">Demo</a> <br/> <br/> </h3>   
+<a href="https://testflight.apple.com/join/vu86ZiDu">Test-Flight</a> <br/> <br/> </h3>   
  </div>   
 
 
@@ -30,7 +30,7 @@ order to decide whether this event is valuable or a waste of time.
 
 # Team
 #### PowerPuff
-<a href="https://www.linkedin.com/in/khulood-alhamed-73a837209/">Khulood Alhamed</a> - Wala Almuheef - <a href="https://www.linkedin.com/in/wedad-almehmadi-701476200/">Wedad Almehmadi</a> - Shahad Buhmail - Rand AlMuhanna
+<a href="https://www.linkedin.com/in/wedad-almehmadi-701476200/">Wedad Almehmadi</a>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
